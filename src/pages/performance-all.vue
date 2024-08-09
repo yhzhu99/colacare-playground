@@ -1,6 +1,4 @@
 <script setup>
-import { Download } from '@element-plus/icons-vue'
-
 import performance from '~/apis/performance_all.json'
 import hyperparameters from '~/apis/hyperparameters.json'
 
@@ -88,7 +86,7 @@ function onBack() {
         </template>
         <template #extra>
           <div class="flex items-center">
-            <a href="/assets/performance.csv" download mx-2>
+            <!-- <a href="/assets/performance.csv" download mx-2>
               <el-button :icon="Download">
                 Download CSV
               </el-button>
@@ -97,7 +95,7 @@ function onBack() {
               <el-button :icon="Download">
                 Download Tex
               </el-button>
-            </a>
+            </a> -->
           </div>
         </template>
       </el-page-header>
