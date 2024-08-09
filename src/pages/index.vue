@@ -6,7 +6,7 @@ defineOptions({
 
 <template>
   <div class="grid-container">
-    <router-link to="/performance-10fold" class="grid-item grid-item-1 button">
+    <router-link to="/" class="grid-item grid-item-1 button">
       <div class="content">
         <h2>Performance Table</h2>
         <p>Provides the average score across all folds</p>
@@ -18,7 +18,7 @@ defineOptions({
         <!-- <img src="/assets/affiliations.png" alt="Project led by Peking University"> -->
       </div>
     </a>
-    <router-link to="/performance-all" class="grid-item button grid-item-3">
+    <router-link to="/" class="grid-item button grid-item-3">
       <div class="content">
         <h2>Performance Table</h2>
         <p>Includes comprehensive performance details for each fold</p>
