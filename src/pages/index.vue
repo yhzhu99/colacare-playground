@@ -12,13 +12,13 @@ defineOptions({
         <p>Anonymized code ZIP file</p>
       </div>
     </router-link>
-    <a class="grid-item button grid-item-2">
+    <router-link to="prompt" class="grid-item button grid-item-2">
       <div class="content">
         <h2>Prompt Template</h2>
         <p>Complete prompt templates</p>
       </div>
-    </a>
-    <router-link to="/" class="grid-item button grid-item-3">
+    </router-link>
+    <router-link to="/case" class="grid-item button grid-item-3">
       <div class="content">
         <h2>Case Study</h2>
         <p>More case studies</p>

@@ -8,6 +8,7 @@ import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import UnoCSS from 'unocss/vite'
 import VueMacros from 'unplugin-vue-macros/vite'
+import Markdown from 'unplugin-vue-markdown/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
 export default defineConfig({
@@ -22,6 +23,7 @@ export default defineConfig({
       defineModels: false,
       plugins: {
         vue: Vue({
+          include: [/\.vue$/, /\.md$/],
           script: {
             propsDestructure: true,
             defineModel: true,
@@ -29,6 +31,8 @@ export default defineConfig({
         }),
       },
     }),
+
+    Markdown({ /* options */ }),
 
     // https://github.com/hannoeru/vite-plugin-pages
     Pages(),
