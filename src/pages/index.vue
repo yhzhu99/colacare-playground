@@ -6,7 +6,7 @@ defineOptions({
 
 <template>
   <div class="grid-container">
-    <router-link to="/" class="grid-item grid-item-1 button">
+    <router-link to="/code" class="grid-item grid-item-1 button">
       <div class="content">
         <h2>Code</h2>
         <p>Anonymized code ZIP file</p>
