@@ -11,7 +11,7 @@ import { Download } from '@element-plus/icons-vue'
         </h2>
 
         <div class="mb-6 flex justify-center">
-          <a href="code.md" download>
+          <a href="ColaCare-Code.zip" download>
             <el-button type="primary" :icon="Download" class="flex items-center px-6 py-3">
               <span class="ml-2 text-lg">Download Code</span>
             </el-button>
