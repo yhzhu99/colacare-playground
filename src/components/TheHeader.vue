@@ -2,11 +2,12 @@
   <nav mt-6 gap-2 text-xl>
     <p>
       <a rel="noreferrer" href="/">
-        COVID-19 EHR Benchmark
+        ColaCare
       </a>
     </p>
     <p>
-      <em text-sm op75>A Comprehensive Benchmark for COVID-19 Predictive Modeling Using Electronic Health Records in Intensive Care</em>
+      <em text-sm op75>
+        ColaCare: Enhancing Electronic Health Record Modeling through Large Language Model-Driven Multi-Agent Collaboration</em>
     </p>
   </nav>
 </template>

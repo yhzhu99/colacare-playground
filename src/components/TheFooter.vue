@@ -7,9 +7,10 @@
     <a
       i-carbon-logo-github icon-btn
       rel="noreferrer"
-      href="https://github.com/yhzhu99/pyehr"
+      href="https://github.com"
       target="_blank"
       title="GitHub"
     />
   </nav>
+<!-- TODO: update code link -->
 </template>

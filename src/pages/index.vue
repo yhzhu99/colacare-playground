@@ -8,26 +8,26 @@ defineOptions({
   <div class="grid-container">
     <router-link to="/" class="grid-item grid-item-1 button">
       <div class="content">
-        <h2>Performance Table</h2>
-        <p>Provides the average score across all folds</p>
+        <h2>Code</h2>
+        <p>Anonymized code ZIP file</p>
       </div>
     </router-link>
-    <a class="grid-item button grid-item-2" href="https://github.com/yhzhu99/pyehr" target="_blank">
+    <a class="grid-item button grid-item-2">
       <div class="content">
-        <h2>COVID-19 EHR Benchmark</h2>
-        <!-- <img src="/assets/affiliations.png" alt="Project led by Peking University"> -->
+        <h2>Prompt Template</h2>
+        <p>Complete prompt templates</p>
       </div>
     </a>
     <router-link to="/" class="grid-item button grid-item-3">
       <div class="content">
-        <h2>Performance Table</h2>
-        <p>Includes comprehensive performance details for each fold</p>
+        <h2>Case Study</h2>
+        <p>More case studies</p>
       </div>
     </router-link>
-    <a class="grid-item button grid-item-4" href="https://drive.google.com/file/d/1Fdt8XUnO3CeJk9mrkPZBk_gUdpCnGFfi/view" target="_blank">
+    <a class="grid-item button grid-item-4">
       <div class="content">
-        <h2>Checkpoints & Logs</h2>
-        <p>Access all model checkpoints and logs via this Google Drive link</p>
+        <h2>ColaCare</h2>
+        <p>More to be released</p>
       </div>
     </a>
   </div>
