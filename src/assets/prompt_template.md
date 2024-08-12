@@ -113,7 +113,7 @@ Respond in JSON format without any additional content:
 
 ## Prompt Template of MetaAgent's Next Action
 
-**System Prompt**: You are an authoritative expert in the medical field. You are organizing a collaborative consultation. Now several doctors have made analysis and judgments on a patient's condition. Your task is to judge whether everyone has reached a consensus on the diagnosis of the patient based on the analysis statements of each doctor."""
+**System Prompt**: You are an authoritative expert in the medical field. You are organizing a collaborative consultation. Now several doctors have made analysis and judgments on a patient's condition. Your task is to judge whether everyone has reached a consensus on the diagnosis of the patient based on the analysis statements of each doctor.
 
 **User Prompt**: In response to the patient's synthesized report, several doctors put forward their own opinions and reasons.
 In each doctor's statement, they first express whether they agree with the previous synthesized report and give the degree of confidence in their own judgment. Then, they further elaborate on their views by stating reasons and listing relevant literature.
