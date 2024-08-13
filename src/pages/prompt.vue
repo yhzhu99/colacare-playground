@@ -83,9 +83,40 @@ import Prompts from '~/assets/prompt_template.md'
   border-left: 0.25em solid #dfe2e5;
 }
 
-.markdown-content ul, .markdown-content ol {
+.markdown-content ul {
+  list-style-type: disc;
   padding-left: 2em;
   text-align: left;
+}
+
+.markdown-content ol {
+  list-style-type: decimal;
+  padding-left: 2em;
+  text-align: left;
+}
+
+.markdown-content ul ul {
+  list-style-type: circle;
+  padding-left: 2em;
+}
+
+.markdown-content ol ol {
+  list-style-type: lower-alpha;
+  padding-left: 2em;
+}
+
+.markdown-content ul ul ul {
+  list-style-type: square;
+  padding-left: 2em;
+}
+
+.markdown-content ol ol ol {
+  list-style-type: lower-roman;
+  padding-left: 2em;
+}
+
+.markdown-content li {
+  margin-bottom: 0.5em;
 }
 
 .markdown-content img {
