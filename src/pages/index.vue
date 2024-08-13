@@ -12,7 +12,7 @@ defineOptions({
         <p>Anonymized code ZIP file</p>
       </div>
     </router-link>
-    <router-link to="prompt" class="grid-item button grid-item-2">
+    <router-link to="/prompt" class="grid-item button grid-item-2">
       <div class="content">
         <h2>Prompt Template</h2>
         <p>Complete prompt templates</p>
