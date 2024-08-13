@@ -3,7 +3,7 @@ import Prompts from '~/assets/prompt_template.md'
 </script>
 
 <template>
-  <div>
+  <div h-full>
     <div class="markdown-content">
       <Prompts />
     </div>
