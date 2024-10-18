@@ -4,296 +4,64 @@
 
 ### Patient Information
 
-This male patient, aged 66.56, is an End-Stage Renal Disease (ESRD) patient with original disease Diabetic Nephropathy, and basic disease Diabetes, Heart failure, Lung infection, Cerebral infarction.
-Here is complete medical information from multiple visits of a patient, with each feature within this data as a string of values separated by commas.
+Here is the patient record, including the patient's basic information, multivariate time-series electronic health record and analysis results of AI models:
+This female patient, aged 46.33, is an End-Stage Renal Disease(ESRD) patient with original disease Chronic glomerulonephritis.
 
-- Blood chlorine: "96.0, 99.0, 98.5, 98.0, 93.6, 94.0, 95.0, 98.0, 97.0, 93.0, 89.0, 94.0, 92.0, 92.0, 92.0, 94.0, 95.0, 95.0, 93.0, 93.0, 93.0, 109.0, 94.0, 111.0, 111.0, 111.0, 107.0, 95.0, 95.0, 104.0, 96.0, 96.0, 96.0, 102.0, 94.0, 101.0, 92.0, 90.6, 90.6, 94.0, 102.0, 90.0, 90.0, 96.0, 100.0, 97.0, 99.0, 99.0, 96.0, 87.7, 100.0, 95.1, 101.0"
-- Carbon dioxide binding power: "28.8, 26.9, 36.0, 25.6, 35.0, 27.6, 26.0, 26.5, 32.0, 29.1, 30.7, 27.8, 26.8, 26.8, 26.8, 25.0, 24.5, 24.5, 22.5, 22.5, 22.5, 14.9, 26.5, 17.9, 17.9, 17.9, 22.7, 27.3, 27.3, 24.7, 26.9, 26.9, 26.9, 25.9, 28.0, 32.4, 30.2, 30.2, 27.9, 26.6, 24.2, 29.4, 29.4, 30.8, 28.3, 32.2, 24.0, 32.0, 35.7, 29.0, 25.2, 28.0, 23.4"
-- White blood cells: "6.69, 6.4, 11.4, 7.25, 7.58, 9.45, 7.89, 8.05, 8.79, 11.8, 8.54, 7.64, 8.9, 5.2, 9.17, 7.58, 7.31, 7.34, 12.12, 9.71, 8.52, 11.65, 8.04, 5.04, 6.39, 7.4, 6.58, 6.58, 9.54, 7.5, 5.74, 9.93, 13.4, 6.43, 11.24, 6.81, 14.47, 15.0, 8.14, 14.95, 8.47, 15.8, 7.64, 12.69, 8.47, 10.87, 8.72, 13.31, 11.4, 13.62, 6.55, 16.15, 6.98"
-- Hemoglobin: "124.0, 130.0, 99.0, 99.0, 64.0, 69.0, 66.0, 63.0, 86.0, 66.0, 75.0, 68.0, 60.0, 74.0, 67.0, 71.0, 80.0, 67.0, 75.0, 77.0, 84.0, 102.0, 83.0, 83.0, 70.0, 65.0, 91.0, 91.0, 62.0, 106.0, 66.0, 64.0, 69.0, 84.0, 95.0, 117.0, 93.0, 96.0, 113.0, 84.0, 101.0, 77.0, 117.0, 74.0, 114.0, 73.0, 100.0, 52.0, 66.0, 94.0, 98.0, 62.0, 109.0"
-- Urea: "20.5, 25.2, 26.9, 26.9, 23.7, 24.0, 21.1, 28.6, 14.2, 13.2, 20.1, 20.1, 23.0, 23.0, 23.0, 22.6, 24.5, 25.2, 18.7, 18.7, 18.7, 40.4, 22.0, 22.0, 22.0, 22.0, 25.6, 23.4, 23.4, 31.2, 21.0, 21.0, 21.0, 29.8, 10.9, 10.9, 15.7, 12.1, 29.0, 12.6, 28.3, 9.5, 22.9, 10.0, 10.0, 12.0, 38.5, 21.8, 23.6, 25.1, 30.0, 18.8, 27.7"
-- Blood calcium: "2.17, 2.09, 2.09, 2.09, 2.49, 2.07, 2.25, 2.24, 2.48, 2.35, 2.39, 2.39, 2.31, 2.31, 2.31, 2.24, 2.66, 2.17, 2.57, 2.57, 2.57, 1.92, 2.42, 2.42, 2.42, 2.42, 2.04, 2.3, 2.3, 2.07, 2.24, 2.24, 2.24, 2.13, 2.46, 2.46, 2.3, 2.69, 2.21, 2.36, 2.16, 2.4, 2.27, 2.46, 2.32, 2.49, 2.26, 2.26, 2.26, 2.39, 2.13, 2.57, 2.05"
-- Blood potassium: "3.12, 3.01, 4.29, 3.35, 3.32, 4.02, 4.21, 4.18, 3.3, 3.14, 3.44, 4.51, 4.89, 4.89, 4.89, 3.33, 4.54, 4.15, 3.39, 3.39, 3.39, 6.31, 4.32, 4.32, 4.32, 4.32, 4.66, 3.94, 3.94, 4.54, 4.18, 4.18, 4.18, 3.3, 2.63, 2.63, 3.41, 3.44, 4.22, 3.61, 3.61, 3.04, 3.02, 4.09, 3.81, 4.92, 9.84, 5.47, 4.7, 4.08, 3.96, 5.23, 3.48"
-- Blood sodium: "135.0, 141.0, 139.2, 139.0, 132.4, 136.0, 136.0, 138.0, 138.0, 135.0, 131.0, 135.0, 133.0, 133.0, 133.0, 137.0, 136.0, 136.0, 138.0, 138.0, 138.0, 137.0, 136.0, 136.0, 136.0, 136.0, 139.0, 139.0, 139.0, 137.0, 140.0, 140.0, 140.0, 143.0, 143.0, 143.0, 133.0, 134.9, 140.0, 134.0, 136.0, 136.0, 143.0, 139.0, 139.0, 138.0, 141.0, 134.0, 136.0, 129.3, 140.0, 130.5, 130.5"
-- Creatinine: "595.0, 532.0, 640.0, 640.0, 638.0, 572.0, 554.0, 782.0, 606.0, 640.0, 603.0, 603.0, 540.0, 540.0, 540.0, 738.0, 832.0, 740.0, 761.0, 761.0, 761.0, 488.0, 696.0, 696.0, 696.0, 696.0, 410.0, 766.0, 766.0, 459.0, 735.0, 735.0, 735.0, 489.0, 710.0, 710.0, 623.0, 739.0, 543.0, 469.0, 487.0, 430.0, 455.0, 422.0, 584.0, 396.0, 678.0, 458.0, 456.0, 444.0, 626.0, 420.0, 637.0"
-- Blood phosphorus: "1.24, 1.43, 1.43, 1.43, 1.43, 1.48, 1.37, 1.79, 1.03, 1.7, 1.33, 1.33, 1.01, 1.01, 1.01, 1.43, 1.96, 1.62, 1.93, 1.93, 1.93, 2.51, 1.37, 1.37, 1.37, 1.37, 1.63, 1.83, 1.83, 1.6, 1.71, 1.71, 1.71, 1.5, 1.37, 1.37, 0.91, 0.91, 1.86, 0.98, 1.35, 1.01, 1.23, 0.96, 1.7, 0.85, 2.14, 2.14, 0.76, 0.76, 2.03, 2.03, 1.67"
-- Albumin: "34.1, 35.7, 35.7, 35.7, 35.7, 35.7, 34.3, 31.7, 32.8, 28.8, 28.8, 28.8, 29.9, 29.9, 29.9, 36.0, 37.4, 37.4, 31.9, 31.9, 31.9, 33.0, 37.1, 37.1, 37.1, 37.1, 37.0, 32.4, 32.4, 39.0, 33.4, 33.4, 33.4, 35.0, 32.9, 32.9, 32.9, 32.9, 40.0, 40.0, 32.0, 24.5, 37.0, 37.0, 36.5, 36.5, 35.8, 29.0, 23.5, 23.5, 33.2, 25.0, 34.8"
-- Hypersensitive C reactive protein: "3.72, 30.02, 30.02, 30.02, 30.02, 30.02, 4.63, 14.86, 14.86, 14.86, 14.86, 14.86, 14.86, 14.86, 14.86, 7.3, 17.77, 17.77, 26.56, 26.56, 26.56, 37.82, 5.57, 1.06, 1.06, 1.06, 1.56, 4.23, 4.23, 6.91, 3.35, 3.35, 3.35, 5.25, 21.99, 3.04, 63.52, 63.52, 9.15, 9.15, 5.35, 72.8, 4.93, 4.93, 15.32, 15.32, 9.74, 9.74, 69.0, 69.0, 16.95, 16.95, 8.56"
-- Blood glucose: "6.1, 6.3, 4.5, 6.0, 12.7, 12.7, 7.3, 6.0, 8.3, 6.4, 6.4, 6.4, 7.4, 7.4, 7.4, 9.8, 6.9, 6.9, 10.0, 10.0, 10.0, 5.3, 9.6, 9.6, 9.6, 9.6, 8.5, 14.1, 14.1, 8.7, 15.7, 15.7, 15.7, 7.0, 28.0, 28.0, 11.6, 16.2, 4.5, 15.9, 15.9, 10.5, 5.8, 5.8, 6.0, 6.0, 6.4, 6.4, 14.2, 14.2, 6.3, 6.3, 4.9"
-- Food intake (with water): "3113.57, 2523.3, 5283.1, 3244.78, 3244.78, 3194.91, 3194.91, 3194.91, 3194.91, 2994.88, 2994.88, 2994.88, 2994.88, 2994.88, 2994.88, 2994.88, 2812.2, 2812.2, 3518.22, 3518.22, 3202.99, 4017.18, 4017.18, 3428.94, 3428.94, 2845.41, 3099.79, 3099.79, 3099.79, 2800.26, 2994.27, 2994.27, 2994.27, 3907.82, 3907.82, 2940.39, 2940.39, 2940.39, 2713.93, 2372.91, 3717.3, 3717.3, 3123.58, 3123.58, 3290.35, 3290.35, 3585.47, 3585.47, 3585.47, 3585.47, 3585.47, 3585.47, 3585.47"
-- Weight: "52.2, 53.0, 53.25, 52.89, 53.38, 53.41, 56.5, 54.0, 54.0, 54.0, 54.0, 54.0, 54.0, 54.0, 54.0, 54.0, 54.0, 54.08, 54.26, 54.68, 54.86, 51.5, 54.5, 54.5, 54.44, 54.33, 54.33, 56.0, 55.25, 55.25, 54.0, 53.0, 51.1, 51.1, 45.0, 45.0, 45.0, 45.0, 45.0, 45.0, 45.0, 45.0, 45.0, 45.0, 45.0, 45.0, 45.0, 45.0, 45.0, 45.0, 51.79, 51.79, 52.4"
-- Systolic blood pressure: "135.0, 166.0, 163.0, 163.0, 121.0, 121.0, 126.0, 150.0, 106.0, 110.0, 110.0, 110.0, 110.0, 110.0, 118.0, 120.0, 124.0, 110.0, 118.0, 128.0, 128.0, 140.0, 123.0, 123.0, 123.0, 121.0, 120.0, 123.0, 124.0, 155.0, 104.0, 102.0, 108.0, 130.0, 81.0, 150.0, 89.0, 89.0, 120.0, 90.0, 90.0, 90.0, 135.0, 135.0, 142.0, 142.0, 130.0, 107.0, 107.0, 107.0, 125.0, 125.0, 140.0"
-- Diastolic blood pressure: "80.0, 79.0, 70.0, 90.0, 52.0, 52.0, 53.0, 60.0, 47.0, 50.0, 50.0, 50.0, 50.0, 43.0, 41.0, 52.0, 72.0, 50.0, 50.0, 48.0, 48.0, 80.0, 55.0, 55.0, 55.0, 50.0, 70.0, 44.0, 50.0, 65.0, 46.0, 41.0, 40.0, 60.0, 42.0, 55.0, 45.0, 45.0, 60.0, 48.0, 80.0, 80.0, 70.0, 70.0, 58.0, 58.0, 50.0, 58.0, 58.0, 58.0, 58.0, 58.0, 90.0"
+Here is multivariate time-series electronic health record data of the patient, a structured collection of patient information comprising multiple clinical variables measured at various time points across multiple patient visits, represented as sequences of numerical values for each feature.
+The patient's EHR data is recorded at the following time points:
+2007-07-17, 2007-10-16, 2007-12-18, 2008-04-22, 2008-07-01, 2008-10-01, 2009-04-14, 2009-07-01, 2009-11-25, 2010-01-01, 2010-04-01, 2010-07-01, 2010-10-01, 2011-01-05, 2011-08-04, 2011-12-06, 2012-03-06, 2012-04-24, 2012-06-05, 2012-08-06, 2012-10-09, 2012-12-04, 2013-02-05, 2013-03-05, 2013-08-06, 2013-10-22, 2014-03-04, 2014-06-26, 2014-10-17, 2015-01-26, 2015-03-19.
+
+- Blood chlorine: "99.0, 99.0, 100.0, 102.0, 102.0, 102.0, 98.0, 101.0, 99.9, 100.0, 102.0, 102.0, 100.0, 98.0, 92.0, 96.0, 101.0, 101.0, 93.0, 96.0, 101.0, 97.0, 101.0, 97.0, 102.0, 100.0, 99.0, 100.0, 99.0, 96.0, 98.0". Unit: mmol/L. Reference range for healthy people: 96 mmol/L to 106 mmol/L. Reference range for ESRD patients: higher than 96 mmol/L.
+- Carbon dioxide binding power: "22.9, 22.9, 25.6, 24.5, 24.5, 26.3, 22.5, 22.2, 24.0, 22.6, 24.3, 24.3, 21.7, 26.4, 26.6, 29.0, 26.7, 26.7, 27.7, 26.2, 25.9, 26.8, 22.6, 23.2, 24.3, 23.1, 25.1, 26.3, 25.0, 20.4, 18.7". Unit: mmol/L. Reference range for healthy people: 20 mmol/L to 29 mmol/L. Reference range for ESRD patients: higher than 25 mmol/L.
+- White blood cells: "8.2, 8.4, 8.67, 7.7, 7.3, 7.3, 7.71, 8.64, 8.75, 6.76, 7.5, 6.54, 8.4, 8.21, 11.3, 9.5, 8.9, 8.9, 8.02, 8.17, 8.06, 8.06, 7.73, 7.73, 7.54, 7.32, 8.23, 6.66, 8.04, 9.6, 8.6". Unit: ×10^9/L. Reference range for healthy people: 3.5 ×10^9/L to 9.5 ×10^9/L.
+- Hemoglobin: "91.0, 103.0, 117.0, 137.0, 161.0, 90.0, 118.0, 109.0, 123.0, 118.0, 121.0, 119.0, 109.0, 115.0, 130.0, 125.0, 118.0, 118.0, 116.0, 111.0, 118.0, 118.0, 122.0, 122.0, 125.0, 119.0, 129.0, 118.0, 113.0, 115.0, 133.0". Unit: g/L. Reference range for healthy people: 115 g/L to 150 g/L. Reference range for ESRD patients: higher than 114 g/L.
+- Urea: "24.0, 24.0, 22.1, 24.2, 24.0, 27.8, 27.8, 30.5, 30.5, 31.6, 24.5, 24.5, 24.5, 28.5, 15.8, 20.3, 26.3, 30.9, 21.4, 31.8, 28.3, 15.7, 22.8, 26.1, 25.5, 26.5, 22.9, 21.9, 26.3, 19.6, 15.2". Unit: mmol/L. Reference range for healthy people: 3.1 mmol/L to 8.0 mmol/L. Reference range for ESRD patients: higher than 20 mmol/L.
+- Blood calcium: "2.43, 2.43, 2.47, 2.52, 2.5, 2.38, 2.38, 2.32, 2.32, 2.34, 2.36, 2.36, 2.36, 2.46, 2.41, 2.41, 2.46, 2.29, 2.53, 2.54, 2.49, 2.42, 2.37, 2.53, 2.56, 2.51, 2.77, 2.52, 2.63, 2.61, 2.43". Unit: mmol/L. Reference range for healthy people: 2.25 mmol/L to 2.75 mmol/L. Reference range for ESRD patients: higher than 2.5 mmol/L.
+- Blood potassium: "3.74, 3.74, 3.75, 3.67, 3.55, 4.41, 4.41, 4.13, 4.13, 3.61, 3.72, 3.72, 3.72, 3.62, 3.74, 4.17, 4.63, 4.63, 4.33, 3.72, 3.86, 3.71, 3.53, 3.65, 4.55, 4.33, 3.78, 3.85, 4.55, 3.58, 3.11". Unit: mmol/L. Reference range for healthy people: 3.5 mmol/L to 5.5 mmol/L. Reference range for ESRD patients: higher than 4 mmol/L.
+- Blood sodium: "141.5, 141.5, 139.2, 140.3, 139.6, 141.0, 141.0, 141.0, 141.0, 142.0, 143.0, 143.0, 143.0, 136.0, 132.0, 138.0, 139.0, 139.0, 132.0, 138.0, 140.0, 139.0, 140.0, 137.0, 142.0, 140.0, 141.0, 140.0, 140.0, 137.0, 136.0". Unit: mmol/L. Reference range for healthy people: 135 mmol/L to 145 mmol/L. Reference range for ESRD patients: higher than 135.5 mmol/L.
+- Creatinine: "1114.0, 1114.0, 1189.0, 1084.0, 1087.0, 1009.0, 1009.0, 1104.0, 1104.0, 1181.0, 1031.0, 1031.0, 1031.0, 961.0, 841.0, 991.0, 954.0, 916.0, 892.0, 912.0, 852.0, 913.0, 822.0, 833.0, 795.0, 838.0, 881.0, 850.0, 776.0, 778.0, 768.0". Unit: μmol/L. Reference range for healthy people: 62 μmol/L to 115 μmol/L. Reference range for ESRD patients: higher than 900 μmol/L.
+- Blood phosphorus: "2.33, 2.33, 1.75, 1.61, 2.21, 1.88, 1.88, 2.34, 2.34, 2.01, 2.17, 2.17, 2.17, 2.2, 1.51, 1.9, 1.53, 2.03, 1.76, 1.91, 1.55, 1.63, 2.05, 1.33, 1.88, 1.81, 1.96, 1.99, 1.9, 1.86, 1.42". Unit: mmol/L. Reference range for healthy people: 1.1 mmol/L to 1.3 mmol/L. Reference range for ESRD patients: higher than 1.5 mmol/L.
+- Albumin: "41.0, 41.0, 40.0, 41.0, 40.0, 38.0, 38.0, 39.0, 39.0, 37.0, 37.0, 37.0, 37.0, 37.0, 35.5, 37.6, 38.3, 38.3, 35.3, 35.6, 36.0, 36.0, 35.4, 34.5, 35.6, 34.3, 35.2, 33.0, 35.4, 31.8, 30.2". Unit: g/L. Reference range for healthy people: 40 g/L to 55 g/L. Reference range for ESRD patients: higher than 32 g/L.
+- Hypersensitive C reactive protein: "0.07, 0.07, 0.08, 0.08, 3.81, 3.81, 2.25, 8.66, 7.43, 2.83, 5.11, 5.11, 20.25, 16.8, 15.39, 12.5, 11.44, 11.44, 9.24, 9.24, 2.83, 2.83, 13.57, 13.57, 13.57, 13.57, 2.05, 1.76, 1.76, 12.93, 7.17". Unit: mg/L. Reference range for healthy people: 0.5 mg/L to 10 mg/L. Reference range for ESRD patients: lower than 16 mg/L.
+- Blood glucose: "8.6, 8.6, 5.6, 6.3, 6.0, 7.3, 7.3, 8.1, 8.1, 5.6, 8.2, 8.2, 8.2, 11.3, 11.3, 9.3, 7.8, 7.8, 6.7, 6.7, 8.6, 8.6, 8.6, 8.6, 8.6, 9.4, 11.5, 8.9, 11.4, 16.8, 14.7". Unit: mmol/L. Reference range for healthy people: 3.9 mmol/L to 6.1 mmol/L. Reference range for ESRD patients: lower than 6 mmol/L.
+- Food intake (with water): "2073.78, 2778.0, 2173.24, 1019.5, 1019.5, 1019.5, 3278.07, 1355.89, 2834.46, 2834.46, 2834.46, 2907.1, 2907.1, 2907.1, 2474.7, 2474.7, 2474.7, 2474.7, 2474.7, 3495.67, 3495.67, 3495.67, 3495.67, 3495.67, 3495.67, 3495.67, 3495.67, 3495.67, 3495.67, 3495.67, 3495.67". Unit: g.
+- Weight: "68.55, 68.09, 67.78, 67.15, 66.8, 66.34, 65.36, 64.97, 64.23, 64.05, 63.6, 63.14, 62.68, 62.2, 65.0, 65.0, 63.0, 63.15, 68.0, 67.22, 66.42, 65.71, 64.0, 64.31, 66.0, 64.81, 61.0, 61.0, 64.0, 64.0, 64.0". Unit: kg. Reference range for ESRD patients: higher than 59 kg.
+- Systolic blood pressure: "130.0, 160.0, 130.0, 145.0, 145.0, 154.0, 158.0, 135.0, 130.0, 140.0, 150.0, 150.0, 150.0, 150.0, 135.0, 163.0, 130.0, 175.0, 140.0, 140.0, 140.0, 145.0, 140.0, 140.0, 140.0, 140.0, 135.0, 135.0, 137.0, 130.0, 130.0". Unit: mmHg. Reference range for healthy people: 100 mmHg to 120 mmHg. Reference range for ESRD patients: higher than 130 mmHg.
+- Diastolic blood pressure: "80.0, 90.0, 70.0, 80.0, 80.0, 80.0, 80.0, 90.0, 75.0, 90.0, 80.0, 80.0, 85.0, 95.0, 80.0, 106.0, 85.0, 105.0, 83.0, 83.0, 90.0, 90.0, 80.0, 80.0, 90.0, 87.0, 80.0, 84.0, 80.0, 80.0, 85.0". Unit: mmHg. Reference range for healthy people: 60 mmHg to 80 mmHg. Reference range for ESRD patients: higher than 70 mmHg.
 
 ### Feature Importance Weights
 
-- **DoctorAgent1**: The mortality prediction risk for the patient from AdaCare model is 0.03 out of 1.0, which means the patient is at a low level of death risk. Our model especially pays great attention to following features:
-  - Carbon dioxide binding power: with shap value of 0.157. The feature value is 23.4 mmol/L, which is 15.0% lower than the average value of survival patients (27.39 mmol/L), 15.0% lower than the average value of deceased patients (27.42 mmol/L). The reference range is 20 mmol/L to 29 mmol/L.
-  - Blood sodium: with shap value of 0.044. The feature value is 130.5 mmol/L, which is 6.0% lower than the average value of survival patients (138.66 mmol/L), 5.0% lower than the average value of deceased patients (137.27 mmol/L). The reference range is 135 mmol/L to 145 mmol/L.
-  - Hemoglobin: with shap value of 0.022. The feature value is 109.0 g/L, which is 5.0% lower than the average value of survival patients (114.98 g/L), 3.0% lower than the average value of deceased patients (112.14 g/L). The reference range is 115 g/L to 150 g/L.
+- **DoctorAgent1**: The mortality prediction risk for the patient from AdaCare model is 0.55 out of 1.0. The risk is at the middle 30% among all ESRD patients. Our model especially pays great attention to the following features:
+Carbon dioxide binding power: with importance weight of 0.788 out of 1.0. The feature value is 18.7 mmol/L, which is 32.0% lower than the median value of survival patients (27.4 mmol/L), 32.0% lower than the median value of deceased patients (27.5 mmol/L). The reference range for healthy people is 20 mmol/L to 29 mmol/L. The reference range for ESRD patients is higher than 25 mmol/L.
+Albumin: with importance weight of 0.749 out of 1.0. The feature value is 30.2 g/L, which is 21.0% lower than the median value of survival patients (38.1 g/L), 9.0% lower than the median value of deceased patients (33.1 g/L). The reference range for healthy people is 40 g/L to 55 g/L. The reference range for ESRD patients is higher than 32 g/L.
+Food intake (with water): with importance weight of 0.707 out of 1.0. The feature value is 3495.67 g, which is 8.0% higher than the median value of survival patients (3241.22 g), 17.0% higher than the median value of deceased patients (2986.63 g).
 
-- **DoctorAgent2**: The mortality prediction risk for the patient from ConCare model is 0.84 out of 1.0, which means the patient is at an extremely high level of death risk. Our model especially pays great attention to following features:
-  - Albumin: with importance weight of 0.543 out of 1.0. The feature value is 34.8 g/L, which is 8.0% lower than the average value of survival patients (38.02 g/L), 2.0% higher than the average value of deceased patients (34.04 g/L). The reference range is 40 g/L to 55 g/L.
-  - Hemoglobin: with importance weight of 0.277 out of 1.0. The feature value is 109.0 g/L, which is 5.0% lower than the average value of survival patients (114.98 g/L), 3.0% lower than the average value of deceased patients (112.14 g/L). The reference range is 115 g/L to 150 g/L.
-  - Blood phosphorus: with importance weight of 0.127 out of 1.0. The feature value is 1.67 mmol/L, which is 4.0% higher than the average value of survival patients (1.6 mmol/L), 8.0% higher than the average value of deceased patients (1.55 mmol/L). The reference range is 1.1 mmol/L to 1.3 mmol/L.
-  - Blood sodium: with importance weight of 0.053 out of 1.0. The feature value is 130.5 mmol/L, which is 6.0% lower than the average value of survival patients (138.66 mmol/L), 5.0% lower than the average value of deceased patients (137.27 mmol/L). The reference range is 135 mmol/L to 145 mmol/L.
+- **DoctorAgent2**: The mortality prediction risk for the patient from ConCare model is 0.17 out of 1.0. The risk is at the bottom 40% among all ESRD patients. Our model especially pays great attention to the following features:
+Diastolic blood pressure: with importance weight of 1.0 out of 1.0. The feature value is 85.0 mmHg, which is 6.0% higher than the median value of survival patients (80.0 mmHg), 21.0% higher than the median value of deceased patients (70.0 mmHg). The reference range for healthy people is 60 mmHg to 80 mmHg. The reference range for ESRD patients is higher than 70 mmHg.
+Creatinine: with importance weight of 0.0 out of 1.0. The feature value is 768.0 μmol/L, which is 10.0% lower than the median value of survival patients (850.0 μmol/L), 4.0% higher than the median value of deceased patients (738.0 μmol/L). The reference range for healthy people is 62 μmol/L to 115 μmol/L. The reference range for ESRD patients is higher than 900 μmol/L.
+Blood chlorine: with importance weight of 0.0 out of 1.0. The feature value is 98.0 mmol/L, which is None than the median value of survival patients (98.0 mmol/L), 2.0% higher than the median value of deceased patients (96.0 mmol/L). The reference range for healthy people is 96 mmol/L to 106 mmol/L. The reference range for ESRD patients is higher than 96 mmol/L.
 
-- **DoctorAgent3**: The mortality prediction risk for the patient from RETAIN model is 0.46 out of 1.0, which means the patient is at a low level of death risk. Our model especially pays great attention to following features:
-  - Carbon dioxide binding power: with shap value of 0.021. The feature value is 23.4 mmol/L, which is 15.0% lower than the average value of survival patients (27.39 mmol/L), 15.0% lower than the average value of deceased patients (27.42 mmol/L). The reference range is 20 mmol/L to 29 mmol/L.
+- **DoctorAgent3**: The mortality prediction risk for the patient from RETAIN model is 0.69 out of 1.0. The risk is at the top 30% among all ESRD patients. Our model especially pays great attention to the following features:
+Blood potassium: with importance weight of 0.788 out of 1.0. The feature value is 3.11 mmol/L, which is 27.0% lower than the median value of survival patients (4.25 mmol/L), 24.0% lower than the median value of deceased patients (4.07 mmol/L). The reference range for healthy people is 3.5 mmol/L to 5.5 mmol/L. The reference range for ESRD patients is higher than 4 mmol/L.
+Albumin: with importance weight of 0.749 out of 1.0. The feature value is 30.2 g/L, which is 21.0% lower than the median value of survival patients (38.1 g/L), 9.0% lower than the median value of deceased patients (33.1 g/L). The reference range for healthy people is 40 g/L to 55 g/L. The reference range for ESRD patients is higher than 32 g/L.
+Food intake (with water): with importance weight of 0.707 out of 1.0. The feature value is 3495.67 g, which is 8.0% higher than the median value of survival patients (3241.22 g), 17.0% higher than the median value of deceased patients (2986.63 g).
 
 ### Retrieved Documents
 
 - **DoctorAgent1**:
-  - **Document [0]**: Title: Understanding Medical Tests and Test Results - Special Subjects - MSD Manual Professional Edition
-  - **Document [1]**: Title: Unit of Measure Conversions - Resources - MSD Manual Professional Edition
-  - **Document [2]**: Title: Hemodialysis - Genitourinary Disorders - MSD Manual Professional Edition
-  - **Document [3]**: Title: Diabetic Nephropathy - Genitourinary Disorders - MSD Manual Professional Edition
-  - **Document [4]**: Title: Metabolic Acidosis - Endocrine and Metabolic Disorders - MSD Manual Professional Edition
-  - **Document [5]**: Title: Blood Tests: Normal Values - Resources - MSD Manual Professional Edition
-  - **Document [6]**: Title: Anemia of Renal Disease - Hematology and Oncology - MSD Manual Professional Edition
-  - **Document [7]**: Title: Hypermagnesemia - Endocrine and Metabolic Disorders - MSD Manual Professional Edition
-  - **Document [8]**: Title: Medical Aspects of Long-Term Renal Replacement Therapy - Genitourinary Disorders - MSD Manual Professional Edition
-  - **Document [9]**: Title: Hyperphosphatemia - Endocrine and Metabolic Disorders - MSD Manual Professional Edition
-  - **Document [10]**: Title: Hyperosmolar Hyperglycemic State (HHS) - Endocrine and Metabolic Disorders - MSD Manual Professional Edition
-  - **Document [11]**: Title: Measurement of Gas Exchange - Pulmonary Disorders - MSD Manual Professional Edition
-  - **Document [12]**: Title: Chronic Kidney Disease - Genitourinary Disorders - MSD Manual Professional Edition
-  - **Document [13]**: Title: Hyperkalemia - Endocrine and Metabolic Disorders - MSD Manual Professional Edition
-  - **Document [14]**: Title: Hypernatremia - Endocrine and Metabolic Disorders - MSD Manual Professional Edition
-  - **Document [15]**: Title: Overview of Disorders of Potassium Concentration - Endocrine and Metabolic Disorders - MSD Manual Professional Edition
-
-- **DoctorAgent2**:
-  - **Document [0]**: Title: Unit of Measure Conversions - Resources - MSD Manual Professional Edition
-  - **Document [1]**: Title: Diabetic Nephropathy - Genitourinary Disorders - MSD Manual Professional Edition
-  - **Document [2]**: Title: Understanding Medical Tests and Test Results - Special Subjects - MSD Manual Professional Edition
-  - **Document [3]**: Title: Hemodialysis - Genitourinary Disorders - MSD Manual Professional Edition
-  - **Document [4]**: Title: Medical Aspects of Long-Term Renal Replacement Therapy - Genitourinary Disorders - MSD Manual Professional Edition
-  - **Document [5]**: Title: Anemia of Renal Disease - Hematology and Oncology - MSD Manual Professional Edition
-  - **Document [6]**: Title: Blood Tests: Normal Values - Resources - MSD Manual Professional Edition
-  - **Document [7]**: Title: Chronic Kidney Disease - Genitourinary Disorders - MSD Manual Professional Edition
-  - **Document [8]**: Title: Hyperphosphatemia - Endocrine and Metabolic Disorders - MSD Manual Professional Edition
-  - **Document [9]**: Title: Metabolic Acidosis - Endocrine and Metabolic Disorders - MSD Manual Professional Edition
-  - **Document [10]**: Title: Renal Insufficiency in Pregnancy - Gynecology and Obstetrics - MSD Manual Professional Edition
-  - **Document [11]**: Title: Monitoring and Testing the Critical Care Patient - Critical Care Medicine - MSD Manual Professional Edition
-  - **Document [12]**: Title: Hypermagnesemia - Endocrine and Metabolic Disorders - MSD Manual Professional Edition
-  - **Document [13]**: Title: Hyperkalemia - Endocrine and Metabolic Disorders - MSD Manual Professional Edition
-  - **Document [14]**: Title: Overview of Disorders of Potassium Concentration - Endocrine and Metabolic Disorders - MSD Manual Professional Edition
-  - **Document [15]**: Title: Drugs for Heart Failure - Cardiovascular Disorders - MSD Manual Professional Edition
-
-- **DoctorAgent3**:
-  - **Document [0]**: Title: Diabetic Nephropathy - Genitourinary Disorders - MSD Manual Professional Edition
-  - **Document [1]**: Title: Understanding Medical Tests and Test Results - Special Subjects - MSD Manual Professional Edition
-  - **Document [2]**: Title: Diabetic Ketoacidosis (DKA) - Endocrine and Metabolic Disorders - MSD Manual Professional Edition
-  - **Document [3]**: Title: Hyperosmolar Hyperglycemic State (HHS) - Endocrine and Metabolic Disorders - MSD Manual Professional Edition
-  - **Document [4]**: Title: Medical Aspects of Long-Term Renal Replacement Therapy - Genitourinary Disorders - MSD Manual Professional Edition
-  - **Document [5]**: Title: Hyperphosphatemia - Endocrine and Metabolic Disorders - MSD Manual Professional Edition
-  - **Document [6]**: Title: Hemodialysis - Genitourinary Disorders - MSD Manual Professional Edition
-  - **Document [7]**: Title: Diabetes Mellitus (DM) - Endocrine and Metabolic Disorders - MSD Manual Professional Edition
-  - **Document [8]**: Title: Complications of Diabetes Mellitus - Endocrine and Metabolic Disorders - MSD Manual Professional Edition
-  - **Document [9]**: Title: Chronic Kidney Disease - Genitourinary Disorders - MSD Manual Professional Edition
-  - **Document [10]**: Title: Drugs for Heart Failure - Cardiovascular Disorders - MSD Manual Professional Edition
-  - **Document [11]**: Title: Hypernatremia - Endocrine and Metabolic Disorders - MSD Manual Professional Edition
-  - **Document [12]**: Title: Hypophosphatemia - Endocrine and Metabolic Disorders - MSD Manual Professional Edition
-  - **Document [13]**: Title: Hyperkalemia - Endocrine and Metabolic Disorders - MSD Manual Professional Edition
-  - **Document [14]**: Title: The Dying Patient - Special Subjects - MSD Manual Professional Edition
-  - **Document [15]**: Title: COVID-19 and Acute Kidney Injury (AKI) - Genitourinary Disorders - MSD Manual Professional Edition
-
-### Initial Reviews
-
-- **DoctorAgent1**:
-
-```json
-{
-    "Logit": "0.03",
-    "Analysis": "The patient, a 66-year-old male with End-Stage Renal Disease due to Diabetic Nephropathy, exhibits a low mortality risk as per the AdaCare model. Key indicators such as carbon dioxide binding power, blood sodium, and hemoglobin are slightly below average but within the reference ranges, suggesting manageable metabolic and hematological parameters. The patient's condition is stable, with no acute exacerbations noted in the provided data.",
-    "Evidences": [
-        "Carbon dioxide binding power at 23.4 mmol/L is within the reference range of 20 mmol/L to 29 mmol/L, indicating normal acid-base balance.",
-        "Blood sodium at 130.5 mmol/L is slightly below the normal range of 135 mmol/L to 145 mmol/L, but not indicative of severe electrolyte imbalance.",
-        "Hemoglobin at 109.0 g/L is within the normal range of 115 g/L to 150 g/L, suggesting adequate oxygen-carrying capacity."
-    ]
-}
-```
-
-- **DoctorAgent2**:
-
-```json
-{
-    "Logit": "0.84",
-    "Analysis": "The patient's condition is critical, with a high mortality risk indicated by the AI model. Key factors contributing to this risk include low albumin levels, which are below the reference range and indicative of malnutrition or liver dysfunction, and low hemoglobin levels, suggesting anemia. Elevated blood phosphorus levels and slightly low blood sodium levels also contribute to the overall poor prognosis. These findings are consistent with the patient's underlying conditions of end-stage renal disease, diabetes, heart failure, and lung infection.",
-    "Evidences": [
-        "Document [1] (Title: Diabetic Nephropathy - Genitourinary Disorders - MSD Manual Professional Edition) discusses the progressive deterioration of renal function in diabetic nephropathy, which can lead to malnutrition and anemia.",
-        "Document [5] (Title: Anemia of Renal Disease - Hematology and Oncology - MSD Manual Professional Edition) explains that anemia is a common complication of renal failure, which is directly related to the patient's low hemoglobin levels.",
-        "Document [8] (Title: Hyperphosphatemia - Endocrine and Metabolic Disorders - MSD Manual Professional Edition) highlights that hyperphosphatemia is a common issue in patients with advanced renal insufficiency, as seen in the patient's elevated blood phosphorus levels.",
-        "Document [12] (Title: Hypermagnesemia - Endocrine and Metabolic Disorders - MSD Manual Professional Edition) mentions that electrolyte imbalances, such as low sodium levels, can occur in patients with renal failure, which is relevant to the patient's condition."
-    ]
-}
-```
-
-- **DoctorAgent3**:
-
-```json
-{
-    "Logit": "0.46",
-    "Analysis": "The patient, aged 66.56, is an End-Stage Renal Disease (ESRD) patient with a history of Diabetic Nephropathy, Diabetes, Heart failure, Lung infection, and Cerebral infarction. The patient's condition is complex and severe, as indicated by the high levels of creatinine (ranging from 410 to 832 \u03bcmol/L), which are significantly above the normal range (62-106 \u03bcmol/L for males). This indicates severe renal dysfunction. Additionally, the patient has fluctuating blood glucose levels, which are particularly high at times (up to 28.0 mmol/L), suggesting poor diabetes control. The patient's blood potassium levels are also concerning, with values as high as 9.84 mmol/L, which is significantly above the normal range (3.5-5.0 mmol/L) and poses a risk of cardiac arrhythmias. The patient's blood phosphorus levels are also elevated, which can contribute to further renal damage and cardiovascular complications. The patient's hemoglobin levels are low (ranging from 52 to 130 g/L), indicating anemia, which is common in chronic kidney disease and can exacerbate fatigue and other symptoms. The patient's systolic blood pressure is also variable, with some readings indicating hypertension, which is a risk factor for cardiovascular events. Overall, the patient's condition is critical, with multiple organ dysfunctions and a high risk of complications.",
-    "Evidences": [
-        "Document [0] (Title: Diabetic Nephropathy - Genitourinary Disorders - MSD Manual Professional Edition) discusses the progression of diabetic nephropathy, which can lead to end-stage kidney disease, as seen in this patient.",
-        "Document [2] (Title: Diabetic Ketoacidosis (DKA) - Endocrine and Metabolic Disorders - MSD Manual Professional Edition) mentions that severe hyperglycemia can lead to osmotic diuresis and significant fluid and electrolyte loss, which may explain the patient's fluctuating blood glucose levels and electrolyte imbalances.",
-        "Document [6] (Title: Hemodialysis - Genitourinary Disorders - MSD Manual Professional Edition) describes the complications of hemodialysis, including electrolyte imbalances, which are relevant to this patient's condition.",
-        "Document [7] (Title: Diabetes Mellitus (DM) - Endocrine and Metabolic Disorders - MSD Manual Professional Edition) highlights the importance of strict glucose control in managing diabetes, which this patient appears to have difficulty achieving.",
-        "Document [12] (Title: Hyperkalemia - Endocrine and Metabolic Disorders - MSD Manual Professional Edition) discusses the risks associated with hyperkalemia, including cardiac arrhythmias, which are a concern given the patient's high blood potassium levels."
-    ]
-}
-```
-
-### Synthesized Report
-
-```json
-{
-    "Answer": "In my opinion, the patient has a high risk of mortality.",
-    "Report": "The patient, aged 66.56, is an End-Stage Renal Disease (ESRD) patient with a history of Diabetic Nephropathy, Diabetes, Heart failure, Lung infection, and Cerebral infarction. Key concerns include severe renal dysfunction indicated by high creatinine levels (410-832 \u03bcmol/L), poor diabetes control with high blood glucose levels (up to 28.0 mmol/L), and significant electrolyte imbalances such as hyperkalemia (blood potassium up to 9.84 mmol/L) and hyperphosphatemia. Additionally, the patient exhibits low albumin levels, low hemoglobin levels indicating anemia, and variable systolic blood pressure, all of which contribute to a critical and complex condition with a high risk of complications and mortality.",
-    "Evidences": [
-        "Doctor 1's opinion on low albumin levels and low hemoglobin levels",
-        "Doctor 2's opinion on high creatinine levels, high blood glucose levels, and significant electrolyte imbalances",
-        "Document [1] on progressive deterioration of renal function in diabetic nephropathy",
-        "Document [5] on anemia as a common complication of renal failure",
-        "Document [8] on hyperphosphatemia in advanced renal insufficiency",
-        "Document [12] on electrolyte imbalances in renal failure"
-    ]
-}
-```
-
-### Collaborative Consultation
-
-#### Round 1
-
-- **DoctorAgent1**:
-
-```json
-{
-    "Answer": "agree",
-    "Confidence": 0.9,
-    "Reason": "The patient's condition is highly critical with severe renal dysfunction, poor diabetes control, significant electrolyte imbalances, and other comorbidities, all of which contribute to a high risk of mortality."
-}
-```
-
-- **DoctorAgent2**:
-
-```json
-{
-    "Answer": "agree",
-    "Confidence": 0.95,
-    "Reason": "The patient's condition is critically severe, with multiple comorbidities and significant electrolyte imbalances that pose a high risk of complications and mortality. The leader expert's summary accurately reflects the complexity and severity of the patient's condition, including renal dysfunction, diabetes control issues, and electrolyte abnormalities."
-}
-```
-
-- **DoctorAgent3**:
-
-```json
-{
-    "Answer": "agree",
-    "Confidence": 0.9,
-    "Reason": "The patient's condition is critical with severe renal dysfunction, poor diabetes control, significant electrolyte imbalances, anemia, and variable blood pressure, all of which contribute to a high risk of complications and mortality."
-}
-```
-
-### Final Report
-
-The patient, aged 66.56, is an End-Stage Renal Disease (ESRD) patient with a history of Diabetic Nephropathy, Diabetes, Heart failure, Lung infection, and Cerebral infarction. Key concerns include severe renal dysfunction indicated by high creatinine levels (410-832 \u03bcmol/L), poor diabetes control with high blood glucose levels (up to 28.0 mmol/L), and significant electrolyte imbalances such as hyperkalemia (blood potassium up to 9.84 mmol/L) and hyperphosphatemia. Additionally, the patient exhibits low albumin levels, low hemoglobin levels indicating anemia, and variable systolic blood pressure, all of which contribute to a critical and complex condition with a high risk of complications and mortality.
-
-## Patient 2
-
-### Patient Information
-
-This female patient, aged 68.44, is an End-Stage Renal Disease(ESRD) patient with original disease Benign arteriosclerosis.
-Here is complete medical information from multiple visits of a patient, with each feature within this data as a string of values separated by commas.
-
-- Blood chlorine: "104.0, 101.0, 96.0, 98.0, 99.0, 100.0, 93.0, 90.0, 96.0, 90.0, 88.0, 91.0, 83.0, 85.0, 85.0, 89.0, 91.0, 97.0, 97.0"
-- Carbon dioxide binding power: "24.5, 29.3, 25.9, 29.9, 28.4, 27.2, 24.8, 30.7, 31.0, 30.0, 29.4, 31.8, 24.6, 31.2, 26.5, 28.1, 29.7, 24.5, 24.5"
-- White blood cells: "7.4, 7.2, 7.9, 7.2, 7.2, 7.1, 8.8, 8.31, 6.7, 9.38, 8.5, 8.18, 6.72, 7.1, 9.26, 7.7, 7.7, 6.54, 10.8"
-- Hemoglobin: "121.0, 128.0, 124.0, 118.0, 118.0, 116.0, 101.0, 108.0, 85.0, 123.0, 98.0, 101.0, 137.0, 127.0, 120.0, 113.0, 113.0, 82.0, 76.0"
-- Urea: "17.7, 17.7, 17.9, 15.9, 24.2, 24.2, 17.7, 17.5, 17.5, 17.5, 12.9, 12.9, 17.3, 11.1, 10.2, 9.9, 8.1, 5.0, 5.0"
-- Blood calcium: "2.68, 2.68, 2.98, 2.88, 2.3, 2.3, 3.17, 2.91, 2.91, 2.91, 2.07, 2.07, 2.44, 2.52, 2.35, 2.08, 2.08, 2.05, 2.05"
-- Blood potassium: "4.82, 4.82, 3.64, 3.7, 3.99, 3.99, 4.18, 4.5, 4.5, 4.5, 3.33, 3.33, 4.96, 4.2, 4.32, 4.57, 3.69, 5.45, 5.45"
-- Blood sodium: "138.9, 138.9, 133.6, 134.4, 138.1, 138.1, 138.0, 135.0, 135.0, 135.0, 133.0, 133.0, 130.0, 131.0, 125.0, 125.0, 128.0, 133.0, 133.0"
-- Creatinine: "661.0, 661.0, 693.0, 621.0, 954.0, 954.0, 624.0, 642.0, 642.0, 642.0, 671.0, 671.0, 724.0, 726.0, 562.0, 520.0, 461.0, 392.0, 392.0"
-- Blood phosphorus: "1.62, 1.62, 1.49, 1.39, 1.9, 1.9, 1.8, 1.97, 1.97, 1.97, 1.47, 1.47, 2.02, 1.86, 1.97, 1.38, 1.38, 0.91, 0.91"
-- Albumin: "36.0, 36.0, 36.0, 35.0, 44.0, 44.0, 39.0, 40.0, 40.0, 40.0, 40.0, 40.0, 37.6, 38.0, 38.0, 26.2, 26.2, 20.8, 20.8"
-- Hypersensitive C reactive protein: "1.77, 1.2, 1.2, 1.4, 2.38, 0.95, 7.56, 9.18, 9.18, 29.56, 29.56, 10.64, 6.98, 2.62, 3.31, 7.61, 7.61, 7.61, 7.61"
-- Blood glucose: "5.3, 5.3, 5.1, 4.8, 4.3, 4.3, 5.4, 5.2, 5.2, 5.2, 5.2, 5.2, 5.2, 6.1, 6.0, 5.9, 6.1, 5.7, 5.7"
-- Food intake (with water): "2931.94, 2462.85, 1560.15, 1921.19, 1629.19, 1629.19, 1685.83, 2494.89, 2494.89, 2494.89, 2838.48, 2838.48, 2838.48, 2623.29, 1578.81, 1578.81, 1578.81, 1578.81, 1578.81"
-- Weight: "47.35, 47.35, 47.45, 47.58, 47.71, 47.81, 47.93, 48.07, 48.14, 48.25, 48.36, 48.47, 49.0, 49.0, 49.0, 49.0, 49.0, 49.0, 49.0"
-- Systolic blood pressure: "130.0, 130.0, 160.0, 150.0, 135.0, 135.0, 132.0, 105.0, 130.0, 110.0, 100.0, 128.0, 110.0, 112.0, 88.0, 88.0, 88.0, 88.0, 88.0"
-- Diastolic blood pressure: "80.0, 80.0, 88.0, 90.0, 80.0, 90.0, 80.0, 68.0, 80.0, 80.0, 60.0, 80.0, 70.0, 70.0, 62.0, 62.0, 62.0, 62.0, 62.0"
-
-### Feature Importance Weights
-
-- **DoctorAgent1**: The mortality prediction risk for the patient from AdaCare model is 0.08 out of 1.0, which means the patient is at a low level of death risk. Our model especially pays great attention to following features:
-  - Carbon dioxide binding power: with shap value of 0.159. The feature value is 24.5 mmol/L, which is 11.0% lower than the average value of survival patients (27.39 mmol/L), 11.0% lower than the average value of deceased patients (27.42 mmol/L). The reference range is 20 mmol/L to 29 mmol/L.
-  - Blood sodium: with shap value of 0.045. The feature value is 133.0 mmol/L, which is 4.0% lower than the average value of survival patients (138.66 mmol/L), 3.0% lower than the average value of deceased patients (137.27 mmol/L). The reference range is 135 mmol/L to 145 mmol/L.
-  - Hemoglobin: with shap value of 0.021. The feature value is 76.0 g/L, which is 34.0% lower than the average value of survival patients (114.98 g/L), 32.0% lower than the average value of deceased patients (112.14 g/L). The reference range is 115 g/L to 150 g/L.
-
-- **DoctorAgent2**: The mortality prediction risk for the patient from ConCare model is 0.9 out of 1.0, which means the patient is at an extremely high level of death risk. Our model especially pays great attention to following features:
-  - Albumin: with importance weight of 0.665 out of 1.0. The feature value is 20.8 g/L, which is 45.0% lower than the average value of survival patients (38.02 g/L), 39.0% lower than the average value of deceased patients (34.04 g/L). The reference range is 40 g/L to 55 g/L.
-  - Urea: with importance weight of 0.3 out of 1.0. The feature value is 5.0 mmol/L, which is 75.0% lower than the average value of survival patients (20.15 mmol/L), 73.0% lower than the average value of deceased patients (18.19 mmol/L). The reference range is 3.1 mmol/L to 8.0 mmol/L.
-
-- **DoctorAgent3**: The mortality prediction risk for the patient from RETAIN model is 0.45 out of 1.0, which means the patient is at a low level of death risk. Our model especially pays great attention to following features:
-  - Carbon dioxide binding power: with shap value of 0.023. The feature value is 24.5 mmol/L, which is 11.0% lower than the average value of survival patients (27.39 mmol/L), 11.0% lower than the average value of deceased patients (27.42 mmol/L). The reference range is 20 mmol/L to 29 mmol/L.
-  - Blood phosphorus: with shap value of -0.006. The feature value is 0.91 mmol/L, which is 43.0% lower than the average value of survival patients (1.6 mmol/L), 41.0% lower than the average value of deceased patients (1.55 mmol/L). The reference range is 1.1 mmol/L to 1.3 mmol/L.
-
-### Retrieved Documents
-
-- **DoctorAgent1**:
-  - **Document [0]**: Title: Hemodialysis - Genitourinary Disorders - MSD Manual Professional Edition
-  - **Document [1]**: Title: Understanding Medical Tests and Test Results - Special Subjects - MSD Manual Professional Edition
+  - **Document [1]**: Title: Hemodialysis - Genitourinary Disorders - MSD Manual Professional Edition
   - **Document [2]**: Title: Unit of Measure Conversions - Resources - MSD Manual Professional Edition
-  - **Document [3]**: Title: Anemia of Renal Disease - Hematology and Oncology - MSD Manual Professional Edition
-  - **Document [4]**: Title: Medical Aspects of Long-Term Renal Replacement Therapy - Genitourinary Disorders - MSD Manual Professional Edition
-  - **Document [5]**: Title: Blood Tests: Normal Values - Resources - MSD Manual Professional Edition
-  - **Document [6]**: Title: Measurement of Gas Exchange - Pulmonary Disorders - MSD Manual Professional Edition
-  - **Document [7]**: Title: Metabolic Acidosis - Endocrine and Metabolic Disorders - MSD Manual Professional Edition
-  - **Document [8]**: Title: Chronic Kidney Disease - Genitourinary Disorders - MSD Manual Professional Edition
-  - **Document [9]**: Title: Diabetic Nephropathy - Genitourinary Disorders - MSD Manual Professional Edition
-  - **Document [10]**: Title: Renal Insufficiency in Pregnancy - Gynecology and Obstetrics - MSD Manual Professional Edition
-  - **Document [11]**: Title: Hyperphosphatemia - Endocrine and Metabolic Disorders - MSD Manual Professional Edition
-  - **Document [12]**: Title: Hypermagnesemia - Endocrine and Metabolic Disorders - MSD Manual Professional Edition
-  - **Document [13]**: Title: Anemia of Chronic Disease - Hematology and Oncology - MSD Manual Professional Edition
-  - **Document [14]**: Title: Drug Efficacy and Safety - Clinical Pharmacology - MSD Manual Professional Edition
-  - **Document [15]**: Title: Monitoring and Testing the Critical Care Patient - Critical Care Medicine - MSD Manual Professional Edition
+  - **Document [3]**: Title: Chronic Kidney Disease - Genitourinary Disorders - MSD Manual Professional Edition
 
 - **DoctorAgent2**:
-  - **Document [0]**: Title: Hemodialysis - Genitourinary Disorders - MSD Manual Professional Edition
-  - **Document [1]**: Title: Renal Insufficiency in Pregnancy - Gynecology and Obstetrics - MSD Manual Professional Edition
-  - **Document [2]**: Title: Medical Aspects of Long-Term Renal Replacement Therapy - Genitourinary Disorders - MSD Manual Professional Edition
-  - **Document [3]**: Title: Chronic Kidney Disease - Genitourinary Disorders - MSD Manual Professional Edition
-  - **Document [4]**: Title: Understanding Medical Tests and Test Results - Special Subjects - MSD Manual Professional Edition
-  - **Document [5]**: Title: Anemia of Renal Disease - Hematology and Oncology - MSD Manual Professional Edition
-  - **Document [6]**: Title: Diabetic Nephropathy - Genitourinary Disorders - MSD Manual Professional Edition
-  - **Document [7]**: Title: Unit of Measure Conversions - Resources - MSD Manual Professional Edition
-  - **Document [8]**: Title: Acute Kidney Injury (AKI) - Genitourinary Disorders - MSD Manual Professional Edition
-  - **Document [9]**: Title: Hyperphosphatemia - Endocrine and Metabolic Disorders - MSD Manual Professional Edition
-  - **Document [10]**: Title: Blood Tests: Normal Values - Resources - MSD Manual Professional Edition
-  - **Document [11]**: Title: Metabolic Acidosis - Endocrine and Metabolic Disorders - MSD Manual Professional Edition
-  - **Document [12]**: Title: Hypermagnesemia - Endocrine and Metabolic Disorders - MSD Manual Professional Edition
-  - **Document [13]**: Title: Sepsis and Septic Shock - Critical Care Medicine - MSD Manual Professional Edition
-  - **Document [14]**: Title: Overview of Renal Replacement Therapy - Genitourinary Disorders - MSD Manual Professional Edition
-  - **Document [15]**: Title: Drug Efficacy and Safety - Clinical Pharmacology - MSD Manual Professional Edition
+  - **Document [1]**: Title: Hemodialysis - Genitourinary Disorders - MSD Manual Professional Edition
+  - **Document [2]**: Title: Hyperphosphatemia - Endocrine and Metabolic Disorders - MSD Manual Professional Edition
+  - **Document [3]**: Title: Renal Insufficiency in Pregnancy - Gynecology and Obstetrics - MSD Manual Professional Edition
 
 - **DoctorAgent3**:
-  - **Document [0]**: Title: Hemodialysis - Genitourinary Disorders - MSD Manual Professional Edition
-  - **Document [1]**: Title: Medical Aspects of Long-Term Renal Replacement Therapy - Genitourinary Disorders - MSD Manual Professional Edition
-  - **Document [2]**: Title: Chronic Kidney Disease - Genitourinary Disorders - MSD Manual Professional Edition
-  - **Document [3]**: Title: Unit of Measure Conversions - Resources - MSD Manual Professional Edition
-  - **Document [4]**: Title: Renal Insufficiency in Pregnancy - Gynecology and Obstetrics - MSD Manual Professional Edition
-  - **Document [5]**: Title: Hyperphosphatemia - Endocrine and Metabolic Disorders - MSD Manual Professional Edition
-  - **Document [6]**: Title: Acute Kidney Injury (AKI) - Genitourinary Disorders - MSD Manual Professional Edition
-  - **Document [7]**: Title: Anemia of Renal Disease - Hematology and Oncology - MSD Manual Professional Edition
-  - **Document [8]**: Title: Understanding Medical Tests and Test Results - Special Subjects - MSD Manual Professional Edition
-  - **Document [9]**: Title: Hypermagnesemia - Endocrine and Metabolic Disorders - MSD Manual Professional Edition
-  - **Document [10]**: Title: Diabetic Nephropathy - Genitourinary Disorders - MSD Manual Professional Edition
-  - **Document [11]**: Title: Metabolic Acidosis - Endocrine and Metabolic Disorders - MSD Manual Professional Edition
-  - **Document [12]**: Title: Overview of Renal Replacement Therapy - Genitourinary Disorders - MSD Manual Professional Edition
-  - **Document [13]**: Title: Hypophosphatemia - Endocrine and Metabolic Disorders - MSD Manual Professional Edition
-  - **Document [14]**: Title: Overview of Disorders of Phosphate Concentration - Endocrine and Metabolic Disorders - MSD Manual Professional Edition
-  - **Document [15]**: Title: The Dying Patient - Special Subjects - MSD Manual Professional Edition
+  - **Document [1]**: Title: Hemodialysis - Genitourinary Disorders - MSD Manual Professional Edition
+  - **Document [2]**: Title: Unit of Measure Conversions - Resources - MSD Manual Professional Edition
+  - **Document [3]**: Title: Chronic Kidney Disease - Genitourinary Disorders - MSD Manual Professional Edition
 
 ### Initial Reviews
 
@@ -301,11 +69,12 @@ Here is complete medical information from multiple visits of a patient, with eac
 
 ```json
 {
-    "Logit": "0.08",
-    "Analysis": "The patient, a 68-year-old female with End-Stage Renal Disease (ESRD) due to benign arteriosclerosis, exhibits a low mortality risk as per the AdaCare model. Key indicators contributing to this assessment include her carbon dioxide binding power, blood sodium levels, and hemoglobin levels. Her carbon dioxide binding power is slightly below the reference range, which may suggest a mild metabolic acidosis, although this is not severe. Her blood sodium levels are also slightly lower than the normal range, indicating potential hyponatremia, which could be related to her renal condition. The most concerning factor is her hemoglobin level, which is significantly below the normal range, indicating anemia, a common complication in patients with chronic kidney disease. Despite these findings, the overall risk remains low, likely due to stable management of her renal condition and other supportive measures.",
-    "Evidences": [
-        "Document [3] (Title: Anemia of Renal Disease - Hematology and Oncology - MSD Manual Professional Edition) discusses the common occurrence of anemia in patients with chronic kidney disease, which is normochromic-normocytic and often caused by deficient erythropoietin production due to reduced functional renal mass.",
-        "Document [7] (Title: Metabolic Acidosis - Endocrine and Metabolic Disorders - MSD Manual Professional Edition) explains that metabolic acidosis, indicated by a low carbon dioxide binding power, can occur in chronic kidney disease due to impaired renal function in maintaining acid-base balance."
+    "logit": "0.55",
+    "analysis": "The patient, a 46-year-old female with End-Stage Renal Disease (ESRD) due to chronic glomerulonephritis, exhibits a moderate mortality risk of 0.55. At the final time-point, key indicators reveal concerning trends: Carbon dioxide binding power is 18.7 mmol/L, significantly below the ESRD reference range of >25 mmol/L, indicating metabolic acidosis, a condition associated with muscle wasting and accelerated kidney disease progression. Albumin levels are 30.2 g/L, also below the ESRD reference range of >32 g/L, suggesting malnutrition and increased susceptibility to infections. Despite these low values, food intake is 3495.67 g, higher than both survival and deceased patient medians, which may indicate an attempt to compensate for poor nutrient absorption or increased metabolic demands. These findings align with the AI model's high importance weights for these features, underscoring their critical role in the patient's prognosis.",
+    "evidences": [
+        "Chronic Kidney Disease - Genitourinary Disorders - MSD Manual Professional Edition: 'Moderate metabolic acidosis (plasma bicarbonate content 15 to 20 mmol/L) is characteristic. Acidosis causes muscle wasting due to protein catabolism, bone loss due to bone buffering of acid, and accelerated progression of kidney disease.'",
+        "Chronic Kidney Disease - Genitourinary Disorders - MSD Manual Professional Edition: 'Anemia is characteristic of moderate to advanced CKD (\u2265 stage 3). The anemia of CKD is normochromic-normocytic, with a hematocrit of 20 to 30% (35 to 40% in patients with polycystic kidney disease). It is usually caused by deficient erythropoietin production due to a reduction of functional renal mass.'",
+        "Chronic Kidney Disease - Genitourinary Disorders - MSD Manual Professional Edition: 'Undernutrition leading to generalized tissue wasting is a prominent feature of chronic uremia.'"
     ]
 }
 ```
@@ -314,12 +83,12 @@ Here is complete medical information from multiple visits of a patient, with eac
 
 ```json
 {
-    "Logit": "0.90",
-    "Analysis": "The patient's condition is critical, with a high mortality risk indicated by the ConCare model. Key factors contributing to this high risk include significantly low levels of albumin and urea. Albumin, at 20.8 g/L, is well below the reference range of 40-55 g/L and is 45% lower than the average value of survival patients. This low albumin level suggests severe malnutrition or liver dysfunction, which are significant risk factors for mortality in ESRD patients. Similarly, the urea level at 5.0 mmol/L is 75% lower than the average of survival patients, indicating possible severe renal dysfunction or inadequate protein intake, further contributing to the high mortality risk.",
-    "Evidences": [
-        "Document [5] (Title: Anemia of Renal Disease - Hematology and Oncology - MSD Manual Professional Edition) states that anemia in chronic renal disease is multifactorial, with hypoproliferation due to decreased erythropoietin (EPO) production being the most common mechanism. This is supported by the patient's low hemoglobin levels, which are indicative of anemia.",
-        "Document [10] (Title: Blood Tests: Normal Values - Resources - MSD Manual Professional Edition) provides the reference range for albumin as 40-55 g/L. The patient's albumin level of 20.8 g/L is significantly below this range, indicating severe malnutrition or liver dysfunction.",
-        "Document [1] (Title: Hemodialysis - Genitourinary Disorders - MSD Manual Professional Edition) discusses the role of hemodialysis in managing patients with renal failure. The patient's low urea level, despite being an ESRD patient, suggests possible severe renal dysfunction or inadequate protein intake, which are critical factors in the patient's high mortality risk."
+    "logit": "0.17",
+    "analysis": "The patient, a 46-year-old female with End-Stage Renal Disease (ESRD) due to chronic glomerulonephritis, exhibits a mortality risk of 0.17, which is relatively low among ESRD patients. At the final time-point, her creatinine level is 768.0 \u03bcmol/L, which, although elevated, is lower than the typical ESRD reference range (>900 \u03bcmol/L), indicating some degree of renal function risk. Her diastolic blood pressure of 85.0 mmHg is within the ESRD reference range (>70 mmHg) but is notably higher than the median value of deceased patients (70.0 mmHg), suggesting a potential protective effect against mortality. The patient's blood chlorine level of 98.0 mmol/L is within the normal range for ESRD patients and is slightly higher than the median value of deceased patients, further supporting a lower mortality risk. Overall, the patient's condition appears relatively stable, with key biomarkers indicating a lower likelihood of adverse outcomes.",
+    "evidences": [
+        "Document [1]: Hemodialysis - Genitourinary Disorders - MSD Manual Professional Edition - 'Overall adjusted annual mortality in hemodialysis-dependent patients is about 16%. The 5-year survival rate is lower for patients with diabetes than for patients with glomerulonephritis.'",
+        "Document [2]: Chronic Kidney Disease - Genitourinary Disorders - MSD Manual Professional Edition - 'Chronic kidney disease (CKD) is long-standing, progressive deterioration of renal function. Symptoms develop slowly and in advanced stages include anorexia, nausea, vomiting, stomatitis, dysgeusia, nocturia, lassitude, fatigue, pruritus, decreased mental acuity, muscle twitches and cramps, water retention, undernutrition, peripheral neuropathies, and seizures.'",
+        "Document [3]: Renal Insufficiency in Pregnancy - Gynecology and Obstetrics - MSD Manual Professional Edition - 'Maternal renal insufficiency may cause Fetal growth restriction Stillbirth After kidney transplantation, full-term, uncomplicated pregnancy is often possible if women have all of the following: A transplanted kidney that has been in place for > 2 years Normal renal function No episodes of rejection Normal blood pressure (BP) Delivery is usually required before term because preeclampsia, fetal growth restriction, or uteroplacental insufficiency develop.'"
     ]
 }
 ```
@@ -328,12 +97,12 @@ Here is complete medical information from multiple visits of a patient, with eac
 
 ```json
 {
-    "Logit": "0.45",
-    "Analysis": "The patient is an End-Stage Renal Disease (ESRD) patient with benign arteriosclerosis, showing significant fluctuations in various biochemical parameters over multiple visits. Notable deviations include low hemoglobin levels, elevated creatinine, and fluctuating blood phosphorus levels. The low carbon dioxide binding power and hypophosphatemia are particularly concerning, indicating potential metabolic imbalances and nutritional deficiencies. Despite these challenges, the patient's mortality risk as predicted by the RETAIN model is low, suggesting a relatively stable condition despite the underlying severe renal dysfunction.",
-    "Evidences": [
-        "Document [0] discusses the management of electrolyte and fluid imbalances in hemodialysis, which is crucial for ESRD patients.",
-        "Document [13] highlights the importance of palliative care in managing the symptoms and improving the quality of life for patients with renal failure.",
-        "Document [14] and [15] provide insights into the disorders of phosphate concentration, which is relevant given the patient's low blood phosphorus levels."
+    "logit": "0.69",
+    "analysis": "The patient, a 46-year-old female with End-Stage Renal Disease (ESRD) due to chronic glomerulonephritis, exhibits several concerning trends at the final time-point. Notably, her blood potassium level is 3.11 mmol/L, significantly below the reference range for ESRD patients (>4 mmol/L), indicating a potential risk for cardiac arrhythmias and muscle weakness. Additionally, her albumin level is 30.2 g/L, which is lower than the reference range for ESRD patients (>32 g/L), suggesting malnutrition or inadequate protein intake. Despite these concerning biochemical markers, her food intake (3495.67 g) is higher than the median values for both survival and deceased patients, which may indicate an attempt to compensate for nutritional deficits but could also contribute to fluid overload. The AI model's high importance weights for blood potassium and albumin underscore their critical roles in predicting mortality risk, with hypokalemia and hypoalbuminemia being significant indicators of poor prognosis in ESRD patients. The patient's systolic blood pressure (130 mmHg) and diastolic blood pressure (85 mmHg) are within the higher reference range for ESRD patients, suggesting ongoing cardiovascular stress. Overall, the patient's condition is precarious, with significant risks related to electrolyte imbalances, nutritional status, and cardiovascular health, all of which are critical in ESRD management.",
+    "evidences": [
+        "Document [1]: Hemodialysis - Genitourinary Disorders - MSD Manual Professional Edition - 'Hypotension has multiple causes, including too-rapid water removal, osmotic fluid shifts across cell membranes, acetate in the dialysate, heat-related vasodilation, allergic reactions, sepsis, and underlying conditions (eg, autonomic neuropathy, cardiomyopathy with poor ejection fraction, myocardial ischemia, arrhythmias).'",
+        "Document [3]: Chronic Kidney Disease - Genitourinary Disorders - MSD Manual Professional Edition - 'Anemia is a common complication of moderate to advanced CKD (\u2265 stage 3) and, when severe, can cause symptoms such as fatigue, pallor, and dyspnea. The anemia of CKD is normochromic-normocytic, with a hematocrit of 20 to 30% (35 to 40% in patients with polycystic kidney disease). It is usually caused by deficient erythropoietin production due to a reduction of functional renal mass.'",
+        "Document [3]: Chronic Kidney Disease - Genitourinary Disorders - MSD Manual Professional Edition - 'Patients with CKD have small shrunken kidneys (usually \u2264 10 cm in length) with thinned, hyperechoic cortex. Obtaining a precise diagnosis becomes increasingly difficult as renal function reaches values close to those of end-stage kidney disease.'"
     ]
 }
 ```
@@ -342,13 +111,17 @@ Here is complete medical information from multiple visits of a patient, with eac
 
 ```json
 {
-    "Answer": "In my opinion, the patient has a high risk of mortality.",
-    "Report": "The patient, a 68-year-old female with End-Stage Renal Disease (ESRD) due to benign arteriosclerosis, exhibits several critical health indicators. Key concerns include significantly low albumin levels, indicating severe malnutrition or liver dysfunction, and low urea levels, suggesting severe renal dysfunction or inadequate protein intake. Additionally, the patient has low hemoglobin levels, indicative of anemia, a common complication in chronic kidney disease. These factors collectively contribute to a high mortality risk.",
-    "Evidences": [
-        "Doctor 2's opinion on low albumin and urea levels",
-        "Document [5] on anemia in chronic renal disease",
-        "Document [10] on albumin reference range",
-        "Document [1] on hemodialysis and renal dysfunction"
+    "answer": "In my opinion, the patient has a high risk of mortality.",
+    "report": "The patient, a 46-year-old female with End-Stage Renal Disease (ESRD) due to chronic glomerulonephritis, exhibits several concerning trends that collectively indicate a high mortality risk. Key features include metabolic acidosis (carbon dioxide binding power of 18.7 mmol/L), hypoalbuminemia (albumin level of 30.2 g/L), and hypokalemia (blood potassium level of 3.11 mmol/L). These biochemical abnormalities suggest significant nutritional deficits, electrolyte imbalances, and potential cardiovascular risks. Despite a higher food intake, the patient's nutritional status remains compromised, indicating poor nutrient absorption or increased metabolic demands. Additionally, the patient's blood pressure, while within the higher reference range, suggests ongoing cardiovascular stress. These factors collectively contribute to a precarious condition with significant risks related to electrolyte imbalances, nutritional status, and cardiovascular health, all of which are critical in ESRD management.",
+    "evidences": [
+        [
+            "Chronic Kidney Disease - Genitourinary Disorders - MSD Manual Professional Edition: 'Moderate metabolic acidosis (plasma bicarbonate content 15 to 20 mmol/L) is characteristic. Acidosis causes muscle wasting due to protein catabolism, bone loss due to bone buffering of acid, and accelerated progression of kidney disease.'",
+            "Chronic Kidney Disease - Genitourinary Disorders - MSD Manual Professional Edition: 'Undernutrition leading to generalized tissue wasting is a prominent feature of chronic uremia.'"
+        ],
+        [
+            "Hemodialysis - Genitourinary Disorders - MSD Manual Professional Edition - 'Hypotension has multiple causes, including too-rapid water removal, osmotic fluid shifts across cell membranes, acetate in the dialysate, heat-related vasodilation, allergic reactions, sepsis, and underlying conditions (eg, autonomic neuropathy, cardiomyopathy with poor ejection fraction, myocardial ischemia, arrhythmias).'",
+            "Chronic Kidney Disease - Genitourinary Disorders - MSD Manual Professional Edition - 'Anemia is a common complication of moderate to advanced CKD (\u2265 stage 3) and, when severe, can cause symptoms such as fatigue, pallor, and dyspnea. The anemia of CKD is normochromic-normocytic, with a hematocrit of 20 to 30% (35 to 40% in patients with polycystic kidney disease). It is usually caused by deficient erythropoietin production due to a reduction of functional renal mass.'"
+        ]
     ]
 }
 ```
@@ -361,12 +134,13 @@ Here is complete medical information from multiple visits of a patient, with eac
 
 ```json
 {
-    "Answer": "disagree",
-    "Confidence": 0.7,
-    "Reason": "The patient's condition, while serious, does not necessarily indicate a high mortality risk based on the provided data and the low mortality risk prediction by the AdaCare model.",
-    "Evidences": [
-        "Document [0]: Chronic kidney disease (CKD) is long-standing, progressive deterioration of renal function. Symptoms develop slowly and in advanced stages include anorexia, nausea, vomiting, stomatitis, dysgeusia, nocturia, lassitude, fatigue, pruritus, decreased mental acuity, muscle twitches and cramps, water retention, undernutrition, peripheral neuropathies, and seizures. Diagnosis is based on laboratory testing of renal function, sometimes followed by renal biopsy. Treatment is primarily directed at the underlying condition but includes fluid and electrolyte management, blood pressure control, treatment of anemia, various types of dialysis, and kidney transplantation.",
-        "Document [7]: Acute kidney injury (AKI) is suspected when urine output falls or serum blood urea nitrogen (BUN) and creatinine rise. Per the KDIGO (Kidney Disease: Improving Global Outcomes) Clinical Practice Guideline for Acute Kidney Injury (1), AKI is defined as any of the following: Increase in the serum creatinine value of \u2265 0.3 mg/dL (26.52 micromol/L) in 48 hours Increase in serum creatinine of \u2265 1.5 times baseline within the prior 7 days Urine volume  0.5 mL/kg/hour for 6 hours Evaluation should determine the presence and type of AKI and seek a cause."
+    "answer": "agree",
+    "confidence": 3,
+    "reason": "The meta doctor's opinion aligns with the critical findings of metabolic acidosis, hypoalbuminemia, and hypokalemia, which are significant indicators of poor prognosis in ESRD. My previous analysis did not fully emphasize the severity of these electrolyte imbalances and their combined impact on cardiovascular health. The high food intake, while noted, does not mitigate the severe nutritional deficits indicated by hypoalbuminemia. The inclusion of hypokalemia in the meta doctor's assessment is crucial, as it directly relates to cardiovascular risks and overall metabolic stability, which are paramount in ESRD management.",
+    "evidences": [
+        "Document [1]: 'Moderate metabolic acidosis (plasma bicarbonate content 15 to 20 mmol/L) is characteristic. Acidosis causes muscle wasting due to protein catabolism, bone loss due to bone buffering of acid, and accelerated progression of kidney disease.'",
+        "Document [1]: 'Anemia is characteristic of moderate to advanced CKD (\u2265 stage 3). The anemia of CKD is normochromic-normocytic, with a hematocrit of 20 to 30% (35 to 40% in patients with polycystic kidney disease).'",
+        "Document [1]: 'Potassium-sparing diuretics, angiotensin-converting enzyme inhibitors, beta-blockers, nonsteroidal anti-inflammatory drugs may raise plasma potassium levels in patients with less advanced renal failure.'"
     ]
 }
 ```
@@ -375,73 +149,33 @@ Here is complete medical information from multiple visits of a patient, with eac
 
 ```json
 {
-    "Answer": "agree",
-    "Confidence": 0.9,
-    "Reason": "The patient's low albumin levels and low urea levels, along with anemia, are consistent with severe malnutrition, liver dysfunction, and renal impairment, which are significant risk factors for mortality in ESRD patients. These findings align with the leader expert's assessment of a high mortality risk."
-}
-```
-
-- **DoctorAgent3**:
-
-```json
-{
-    "Answer": "agree",
-    "Confidence": 0.9,
-    "Reason": "The leader expert's summary report highlights critical health indicators such as low albumin levels, low urea levels, and low hemoglobin levels, which are consistent with severe malnutrition, renal dysfunction, and anemia. These factors are well-documented in medical literature as significant contributors to high mortality risk in patients with ESRD."
-}
-```
-
-- **MetaAgent**:
-
-```json
-{
-    "Action": "Continue the discussion",
-    "Reason": "Doctor 0 strongly disagrees with the previous summary report and provides high confidence along with relevant literature to support their viewpoint, indicating a need for further discussion."
-}
-```
-
-```json
-{
-    "Answer": "In my opinion, the patient has a high risk of mortality.",
-    "Report": "68-year-old female with End-Stage Renal Disease (ESRD) due to benign arteriosclerosis. Key health indicators include significantly low albumin levels, low urea levels, and low hemoglobin levels, indicating severe malnutrition, renal dysfunction, and anemia. These factors, along with the patient's advanced age and ESRD, contribute to a high mortality risk. Close monitoring and aggressive management of these conditions are critical for patient outcomes.",
-    "Reasons": [
-        "Doctor 1 and Doctor 2 supported the high mortality risk assessment based on the patient's low albumin, low urea, and low hemoglobin levels, consistent with severe malnutrition, renal dysfunction, and anemia. Doctor 0 disagreed, citing the low mortality risk prediction by the AdaCare model, but the majority consensus and clinical evidence support the high risk assessment."
+    "answer": "agree",
+    "confidence": 3,
+    "reason": "The meta doctor's opinion highlights critical factors that were overlooked in my initial analysis. Specifically, the presence of metabolic acidosis, hypoalbuminemia, and hypokalemia are significant indicators of a high mortality risk. Metabolic acidosis (carbon dioxide binding power of 18.7 mmol/L) can lead to muscle wasting, bone loss, and accelerated kidney disease progression (Document [1]). Hypoalbuminemia (albumin level of 30.2 g/L) suggests poor nutritional status and increased susceptibility to infections and fluid retention, which are common complications in ESRD patients (Document [1]). Hypokalemia (blood potassium level of 3.11 mmol/L) can cause cardiac arrhythmias and muscle weakness, further complicating the patient's condition (Document [1]). These factors, combined with the patient's higher diastolic blood pressure, indicate ongoing cardiovascular stress, which is a major risk factor in ESRD. Therefore, these key features collectively suggest a high mortality risk, aligning with the meta doctor's opinion.",
+    "evidences": [
+        "Document [1]: Decreased renal function interferes with the kidneys\u2019 ability to maintain fluid and electrolyte homeostasis. Moderate metabolic acidosis (plasma bicarbonate content 15 to 20 mmol/L) is characteristic. Acidosis causes muscle wasting due to protein catabolism, bone loss due to bone buffering of acid, and accelerated progression of kidney disease.",
+        "Document [1]: Anemia is characteristic of moderate to advanced CKD (\u2265 stage 3). The anemia of CKD is normochromic-normocytic, with a hematocrit of 20 to 30% (35 to 40% in patients with polycystic kidney disease).",
+        "Document [1]: Potassium-sparing diuretics, angiotensin-converting enzyme inhibitors, beta-blockers, nonsteroidal anti-inflammatory drugs may raise plasma potassium levels in patients with less advanced renal failure."
     ]
 }
 ```
 
-#### Round 2
-
-- **DoctorAgent1**:
-
-```json
-{
-    "Answer": "agree",
-    "Confidence": 0.9,
-    "Reason": "The patient's condition, as indicated by low albumin levels, low urea levels, and low hemoglobin levels, is consistent with severe malnutrition, renal dysfunction, and anemia, which are well-known risk factors for increased mortality in patients with ESRD."
-}
-```
-
-- **DoctorAgent2**:
-
-```json
-{
-    "Answer": "agree",
-    "Confidence": 0.9,
-    "Reason": "The patient's low albumin levels, low urea levels, and anemia, along with ESRD due to benign arteriosclerosis, are consistent with severe malnutrition, renal dysfunction, and anemia, which are significant risk factors for mortality in ESRD patients. These findings align with the leader expert's assessment of a high mortality risk."
-}
-```
-
 - **DoctorAgent3**:
 
 ```json
 {
-    "Answer": "agree",
-    "Confidence": 0.9,
-    "Reason": "The patient's advanced age, ESRD due to benign arteriosclerosis, significantly low albumin levels, low urea levels, and low hemoglobin levels collectively indicate severe malnutrition, renal dysfunction, and anemia, which are critical factors contributing to a high mortality risk."
+    "answer": "agree",
+    "confidence": 3,
+    "reason": "The synthesized report accurately captures the critical issues affecting the patient's prognosis. The patient's hypokalemia, hypoalbuminemia, and metabolic acidosis are significant indicators of poor prognosis in ESRD patients, as highlighted in Document [1]. Hypokalemia can lead to severe cardiac arrhythmias and muscle weakness, while hypoalbuminemia suggests inadequate protein intake or malnutrition, both of which are associated with increased mortality risk. The patient's higher food intake, while attempting to compensate for nutritional deficits, may also contribute to fluid overload, a common complication in ESRD. The ongoing cardiovascular stress indicated by the patient's blood pressure further exacerbates her condition. These factors collectively contribute to a high mortality risk, aligning with the meta doctor's opinion.",
+    "evidences": [
+        "Document [1]: 'Anemia is characteristic of moderate to advanced CKD (\u2265 stage 3). The anemia of CKD is normochromic-normocytic, with a hematocrit of 20 to 30% (35 to 40% in patients with polycystic kidney disease). It is usually caused by deficient erythropoietin production due to a reduction of functional renal mass.'",
+        "Document [1]: 'Decreased renal function interferes with the kidneys\u2019 ability to maintain fluid and electrolyte homeostasis. The ability to concentrate urine declines early and is followed by decreases in ability to excrete excess phosphate, acid, and potassium.'",
+        "Document [1]: 'Hypertension is present in > 80% of patients with advanced CKD and is usually related to hypervolemia.'",
+        "Document [3]: 'Volume overload generally refers to expansion of the extracellular fluid (ECF) volume. ECF volume expansion typically occurs in heart failure, acute or chronic kidney failure, nephrotic syndrome, and cirrhosis.'"
+    ]
 }
 ```
 
 ### Final Report
 
-68-year-old female with End-Stage Renal Disease (ESRD) due to benign arteriosclerosis. Key health indicators include significantly low albumin levels, low urea levels, and low hemoglobin levels, indicating severe malnutrition, renal dysfunction, and anemia. These factors, along with the patient's advanced age and ESRD, contribute to a high mortality risk. Close monitoring and aggressive management of these conditions are critical for patient outcomes.
+The patient, a 46-year-old female with End-Stage Renal Disease (ESRD) due to chronic glomerulonephritis, exhibits significant biochemical abnormalities including metabolic acidosis, hypoalbuminemia, and hypokalemia. These conditions indicate severe nutritional deficits, electrolyte imbalances, and potential cardiovascular risks. Despite increased food intake, the patient's nutritional status remains compromised, suggesting poor nutrient absorption or increased metabolic demands. Additionally, the patient's blood pressure, while within the higher reference range, suggests ongoing cardiovascular stress. These factors collectively contribute to a precarious condition with significant risks related to electrolyte imbalances, nutritional status, and cardiovascular health, all of which are critical in ESRD management.
