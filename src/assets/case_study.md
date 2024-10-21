@@ -32,28 +32,30 @@ The patient's EHR data is recorded at the following time points:
 ### Feature Importance Weights
 
 - **DoctorAgent1**: The mortality prediction risk for the patient from AdaCare model is 0.55 out of 1.0. The risk is at the middle 30% among all ESRD patients. Our model especially pays great attention to the following features:
-Carbon dioxide binding power: with importance weight of 0.788 out of 1.0. The feature value is 18.7 mmol/L, which is 32.0% lower than the median value of survival patients (27.4 mmol/L), 32.0% lower than the median value of deceased patients (27.5 mmol/L). The reference range for healthy people is 20 mmol/L to 29 mmol/L. The reference range for ESRD patients is higher than 25 mmol/L.
-Albumin: with importance weight of 0.749 out of 1.0. The feature value is 30.2 g/L, which is 21.0% lower than the median value of survival patients (38.1 g/L), 9.0% lower than the median value of deceased patients (33.1 g/L). The reference range for healthy people is 40 g/L to 55 g/L. The reference range for ESRD patients is higher than 32 g/L.
-Food intake (with water): with importance weight of 0.707 out of 1.0. The feature value is 3495.67 g, which is 8.0% higher than the median value of survival patients (3241.22 g), 17.0% higher than the median value of deceased patients (2986.63 g).
+  Carbon dioxide binding power: with importance weight of 0.788 out of 1.0. The feature value is 18.7 mmol/L, which is 32.0% lower than the median value of survival patients (27.4 mmol/L), 32.0% lower than the median value of deceased patients (27.5 mmol/L). The reference range for healthy people is 20 mmol/L to 29 mmol/L. The reference range for ESRD patients is higher than 25 mmol/L.
+  Albumin: with importance weight of 0.749 out of 1.0. The feature value is 30.2 g/L, which is 21.0% lower than the median value of survival patients (38.1 g/L), 9.0% lower than the median value of deceased patients (33.1 g/L). The reference range for healthy people is 40 g/L to 55 g/L. The reference range for ESRD patients is higher than 32 g/L.
+  Food intake (with water): with importance weight of 0.707 out of 1.0. The feature value is 3495.67 g, which is 8.0% higher than the median value of survival patients (3241.22 g), 17.0% higher than the median value of deceased patients (2986.63 g).
 
 - **DoctorAgent2**: The mortality prediction risk for the patient from ConCare model is 0.17 out of 1.0. The risk is at the bottom 40% among all ESRD patients. Our model especially pays great attention to the following features:
-Diastolic blood pressure: with importance weight of 1.0 out of 1.0. The feature value is 85.0 mmHg, which is 6.0% higher than the median value of survival patients (80.0 mmHg), 21.0% higher than the median value of deceased patients (70.0 mmHg). The reference range for healthy people is 60 mmHg to 80 mmHg. The reference range for ESRD patients is higher than 70 mmHg.
-Creatinine: with importance weight of 0.0 out of 1.0. The feature value is 768.0 μmol/L, which is 10.0% lower than the median value of survival patients (850.0 μmol/L), 4.0% higher than the median value of deceased patients (738.0 μmol/L). The reference range for healthy people is 62 μmol/L to 115 μmol/L. The reference range for ESRD patients is higher than 900 μmol/L.
-Blood chlorine: with importance weight of 0.0 out of 1.0. The feature value is 98.0 mmol/L, which is None than the median value of survival patients (98.0 mmol/L), 2.0% higher than the median value of deceased patients (96.0 mmol/L). The reference range for healthy people is 96 mmol/L to 106 mmol/L. The reference range for ESRD patients is higher than 96 mmol/L.
+  Diastolic blood pressure: with importance weight of 1.0 out of 1.0. The feature value is 85.0 mmHg, which is 6.0% higher than the median value of survival patients (80.0 mmHg), 21.0% higher than the median value of deceased patients (70.0 mmHg). The reference range for healthy people is 60 mmHg to 80 mmHg. The reference range for ESRD patients is higher than 70 mmHg.
+  Creatinine: with importance weight of 0.0 out of 1.0. The feature value is 768.0 μmol/L, which is 10.0% lower than the median value of survival patients (850.0 μmol/L), 4.0% higher than the median value of deceased patients (738.0 μmol/L). The reference range for healthy people is 62 μmol/L to 115 μmol/L. The reference range for ESRD patients is higher than 900 μmol/L.
+  Blood chlorine: with importance weight of 0.0 out of 1.0. The feature value is 98.0 mmol/L, which is None than the median value of survival patients (98.0 mmol/L), 2.0% higher than the median value of deceased patients (96.0 mmol/L). The reference range for healthy people is 96 mmol/L to 106 mmol/L. The reference range for ESRD patients is higher than 96 mmol/L.
 
 - **DoctorAgent3**: The mortality prediction risk for the patient from RETAIN model is 0.69 out of 1.0. The risk is at the top 30% among all ESRD patients. Our model especially pays great attention to the following features:
-Blood potassium: with importance weight of 0.788 out of 1.0. The feature value is 3.11 mmol/L, which is 27.0% lower than the median value of survival patients (4.25 mmol/L), 24.0% lower than the median value of deceased patients (4.07 mmol/L). The reference range for healthy people is 3.5 mmol/L to 5.5 mmol/L. The reference range for ESRD patients is higher than 4 mmol/L.
-Albumin: with importance weight of 0.749 out of 1.0. The feature value is 30.2 g/L, which is 21.0% lower than the median value of survival patients (38.1 g/L), 9.0% lower than the median value of deceased patients (33.1 g/L). The reference range for healthy people is 40 g/L to 55 g/L. The reference range for ESRD patients is higher than 32 g/L.
-Food intake (with water): with importance weight of 0.707 out of 1.0. The feature value is 3495.67 g, which is 8.0% higher than the median value of survival patients (3241.22 g), 17.0% higher than the median value of deceased patients (2986.63 g).
+  Blood potassium: with importance weight of 0.788 out of 1.0. The feature value is 3.11 mmol/L, which is 27.0% lower than the median value of survival patients (4.25 mmol/L), 24.0% lower than the median value of deceased patients (4.07 mmol/L). The reference range for healthy people is 3.5 mmol/L to 5.5 mmol/L. The reference range for ESRD patients is higher than 4 mmol/L.
+  Albumin: with importance weight of 0.749 out of 1.0. The feature value is 30.2 g/L, which is 21.0% lower than the median value of survival patients (38.1 g/L), 9.0% lower than the median value of deceased patients (33.1 g/L). The reference range for healthy people is 40 g/L to 55 g/L. The reference range for ESRD patients is higher than 32 g/L.
+  Food intake (with water): with importance weight of 0.707 out of 1.0. The feature value is 3495.67 g, which is 8.0% higher than the median value of survival patients (3241.22 g), 17.0% higher than the median value of deceased patients (2986.63 g).
 
 ### Retrieved Documents
 
 - **DoctorAgent1**:
+
   - **Document [1]**: Title: Hemodialysis - Genitourinary Disorders - MSD Manual Professional Edition
   - **Document [2]**: Title: Unit of Measure Conversions - Resources - MSD Manual Professional Edition
   - **Document [3]**: Title: Chronic Kidney Disease - Genitourinary Disorders - MSD Manual Professional Edition
 
 - **DoctorAgent2**:
+
   - **Document [1]**: Title: Hemodialysis - Genitourinary Disorders - MSD Manual Professional Edition
   - **Document [2]**: Title: Hyperphosphatemia - Endocrine and Metabolic Disorders - MSD Manual Professional Edition
   - **Document [3]**: Title: Renal Insufficiency in Pregnancy - Gynecology and Obstetrics - MSD Manual Professional Edition
@@ -69,13 +71,13 @@ Food intake (with water): with importance weight of 0.707 out of 1.0. The featur
 
 ```json
 {
-    "logit": "0.55",
-    "analysis": "The patient, a 46-year-old female with End-Stage Renal Disease (ESRD) due to chronic glomerulonephritis, exhibits a moderate mortality risk of 0.55. At the final time-point, key indicators reveal concerning trends: Carbon dioxide binding power is 18.7 mmol/L, significantly below the ESRD reference range of >25 mmol/L, indicating metabolic acidosis, a condition associated with muscle wasting and accelerated kidney disease progression. Albumin levels are 30.2 g/L, also below the ESRD reference range of >32 g/L, suggesting malnutrition and increased susceptibility to infections. Despite these low values, food intake is 3495.67 g, higher than both survival and deceased patient medians, which may indicate an attempt to compensate for poor nutrient absorption or increased metabolic demands. These findings align with the AI model's high importance weights for these features, underscoring their critical role in the patient's prognosis.",
-    "evidences": [
-        "Chronic Kidney Disease - Genitourinary Disorders - MSD Manual Professional Edition: 'Moderate metabolic acidosis (plasma bicarbonate content 15 to 20 mmol/L) is characteristic. Acidosis causes muscle wasting due to protein catabolism, bone loss due to bone buffering of acid, and accelerated progression of kidney disease.'",
-        "Chronic Kidney Disease - Genitourinary Disorders - MSD Manual Professional Edition: 'Anemia is characteristic of moderate to advanced CKD (\u2265 stage 3). The anemia of CKD is normochromic-normocytic, with a hematocrit of 20 to 30% (35 to 40% in patients with polycystic kidney disease). It is usually caused by deficient erythropoietin production due to a reduction of functional renal mass.'",
-        "Chronic Kidney Disease - Genitourinary Disorders - MSD Manual Professional Edition: 'Undernutrition leading to generalized tissue wasting is a prominent feature of chronic uremia.'"
-    ]
+  "logit": "0.55",
+  "analysis": "The patient, a 46-year-old female with End-Stage Renal Disease (ESRD) due to chronic glomerulonephritis, exhibits a moderate mortality risk of 0.55. At the final time-point, key indicators reveal concerning trends: Carbon dioxide binding power is 18.7 mmol/L, significantly below the ESRD reference range of >25 mmol/L, indicating metabolic acidosis, a condition associated with muscle wasting and accelerated kidney disease progression. Albumin levels are 30.2 g/L, also below the ESRD reference range of >32 g/L, suggesting malnutrition and increased susceptibility to infections. Despite these low values, food intake is 3495.67 g, higher than both survival and deceased patient medians, which may indicate an attempt to compensate for poor nutrient absorption or increased metabolic demands. These findings align with the AI model's high importance weights for these features, underscoring their critical role in the patient's prognosis.",
+  "evidences": [
+    "Chronic Kidney Disease - Genitourinary Disorders - MSD Manual Professional Edition: 'Moderate metabolic acidosis (plasma bicarbonate content 15 to 20 mmol/L) is characteristic. Acidosis causes muscle wasting due to protein catabolism, bone loss due to bone buffering of acid, and accelerated progression of kidney disease.'",
+    "Chronic Kidney Disease - Genitourinary Disorders - MSD Manual Professional Edition: 'Anemia is characteristic of moderate to advanced CKD (\u2265 stage 3). The anemia of CKD is normochromic-normocytic, with a hematocrit of 20 to 30% (35 to 40% in patients with polycystic kidney disease). It is usually caused by deficient erythropoietin production due to a reduction of functional renal mass.'",
+    "Chronic Kidney Disease - Genitourinary Disorders - MSD Manual Professional Edition: 'Undernutrition leading to generalized tissue wasting is a prominent feature of chronic uremia.'"
+  ]
 }
 ```
 
@@ -83,13 +85,13 @@ Food intake (with water): with importance weight of 0.707 out of 1.0. The featur
 
 ```json
 {
-    "logit": "0.17",
-    "analysis": "The patient, a 46-year-old female with End-Stage Renal Disease (ESRD) due to chronic glomerulonephritis, exhibits a mortality risk of 0.17, which is relatively low among ESRD patients. At the final time-point, her creatinine level is 768.0 \u03bcmol/L, which, although elevated, is lower than the typical ESRD reference range (>900 \u03bcmol/L), indicating some degree of renal function risk. Her diastolic blood pressure of 85.0 mmHg is within the ESRD reference range (>70 mmHg) but is notably higher than the median value of deceased patients (70.0 mmHg), suggesting a potential protective effect against mortality. The patient's blood chlorine level of 98.0 mmol/L is within the normal range for ESRD patients and is slightly higher than the median value of deceased patients, further supporting a lower mortality risk. Overall, the patient's condition appears relatively stable, with key biomarkers indicating a lower likelihood of adverse outcomes.",
-    "evidences": [
-        "Document [1]: Hemodialysis - Genitourinary Disorders - MSD Manual Professional Edition - 'Overall adjusted annual mortality in hemodialysis-dependent patients is about 16%. The 5-year survival rate is lower for patients with diabetes than for patients with glomerulonephritis.'",
-        "Document [2]: Chronic Kidney Disease - Genitourinary Disorders - MSD Manual Professional Edition - 'Chronic kidney disease (CKD) is long-standing, progressive deterioration of renal function. Symptoms develop slowly and in advanced stages include anorexia, nausea, vomiting, stomatitis, dysgeusia, nocturia, lassitude, fatigue, pruritus, decreased mental acuity, muscle twitches and cramps, water retention, undernutrition, peripheral neuropathies, and seizures.'",
-        "Document [3]: Renal Insufficiency in Pregnancy - Gynecology and Obstetrics - MSD Manual Professional Edition - 'Maternal renal insufficiency may cause Fetal growth restriction Stillbirth After kidney transplantation, full-term, uncomplicated pregnancy is often possible if women have all of the following: A transplanted kidney that has been in place for > 2 years Normal renal function No episodes of rejection Normal blood pressure (BP) Delivery is usually required before term because preeclampsia, fetal growth restriction, or uteroplacental insufficiency develop.'"
-    ]
+  "logit": "0.17",
+  "analysis": "The patient, a 46-year-old female with End-Stage Renal Disease (ESRD) due to chronic glomerulonephritis, exhibits a mortality risk of 0.17, which is relatively low among ESRD patients. At the final time-point, her creatinine level is 768.0 \u03bcmol/L, which, although elevated, is lower than the typical ESRD reference range (>900 \u03bcmol/L), indicating some degree of renal function risk. Her diastolic blood pressure of 85.0 mmHg is within the ESRD reference range (>70 mmHg) but is notably higher than the median value of deceased patients (70.0 mmHg), suggesting a potential protective effect against mortality. The patient's blood chlorine level of 98.0 mmol/L is within the normal range for ESRD patients and is slightly higher than the median value of deceased patients, further supporting a lower mortality risk. Overall, the patient's condition appears relatively stable, with key biomarkers indicating a lower likelihood of adverse outcomes.",
+  "evidences": [
+    "Document [1]: Hemodialysis - Genitourinary Disorders - MSD Manual Professional Edition - 'Overall adjusted annual mortality in hemodialysis-dependent patients is about 16%. The 5-year survival rate is lower for patients with diabetes than for patients with glomerulonephritis.'",
+    "Document [2]: Chronic Kidney Disease - Genitourinary Disorders - MSD Manual Professional Edition - 'Chronic kidney disease (CKD) is long-standing, progressive deterioration of renal function. Symptoms develop slowly and in advanced stages include anorexia, nausea, vomiting, stomatitis, dysgeusia, nocturia, lassitude, fatigue, pruritus, decreased mental acuity, muscle twitches and cramps, water retention, undernutrition, peripheral neuropathies, and seizures.'",
+    "Document [3]: Renal Insufficiency in Pregnancy - Gynecology and Obstetrics - MSD Manual Professional Edition - 'Maternal renal insufficiency may cause Fetal growth restriction Stillbirth After kidney transplantation, full-term, uncomplicated pregnancy is often possible if women have all of the following: A transplanted kidney that has been in place for > 2 years Normal renal function No episodes of rejection Normal blood pressure (BP) Delivery is usually required before term because preeclampsia, fetal growth restriction, or uteroplacental insufficiency develop.'"
+  ]
 }
 ```
 
@@ -97,13 +99,13 @@ Food intake (with water): with importance weight of 0.707 out of 1.0. The featur
 
 ```json
 {
-    "logit": "0.69",
-    "analysis": "The patient, a 46-year-old female with End-Stage Renal Disease (ESRD) due to chronic glomerulonephritis, exhibits several concerning trends at the final time-point. Notably, her blood potassium level is 3.11 mmol/L, significantly below the reference range for ESRD patients (>4 mmol/L), indicating a potential risk for cardiac arrhythmias and muscle weakness. Additionally, her albumin level is 30.2 g/L, which is lower than the reference range for ESRD patients (>32 g/L), suggesting malnutrition or inadequate protein intake. Despite these concerning biochemical markers, her food intake (3495.67 g) is higher than the median values for both survival and deceased patients, which may indicate an attempt to compensate for nutritional deficits but could also contribute to fluid overload. The AI model's high importance weights for blood potassium and albumin underscore their critical roles in predicting mortality risk, with hypokalemia and hypoalbuminemia being significant indicators of poor prognosis in ESRD patients. The patient's systolic blood pressure (130 mmHg) and diastolic blood pressure (85 mmHg) are within the higher reference range for ESRD patients, suggesting ongoing cardiovascular stress. Overall, the patient's condition is precarious, with significant risks related to electrolyte imbalances, nutritional status, and cardiovascular health, all of which are critical in ESRD management.",
-    "evidences": [
-        "Document [1]: Hemodialysis - Genitourinary Disorders - MSD Manual Professional Edition - 'Hypotension has multiple causes, including too-rapid water removal, osmotic fluid shifts across cell membranes, acetate in the dialysate, heat-related vasodilation, allergic reactions, sepsis, and underlying conditions (eg, autonomic neuropathy, cardiomyopathy with poor ejection fraction, myocardial ischemia, arrhythmias).'",
-        "Document [3]: Chronic Kidney Disease - Genitourinary Disorders - MSD Manual Professional Edition - 'Anemia is a common complication of moderate to advanced CKD (\u2265 stage 3) and, when severe, can cause symptoms such as fatigue, pallor, and dyspnea. The anemia of CKD is normochromic-normocytic, with a hematocrit of 20 to 30% (35 to 40% in patients with polycystic kidney disease). It is usually caused by deficient erythropoietin production due to a reduction of functional renal mass.'",
-        "Document [3]: Chronic Kidney Disease - Genitourinary Disorders - MSD Manual Professional Edition - 'Patients with CKD have small shrunken kidneys (usually \u2264 10 cm in length) with thinned, hyperechoic cortex. Obtaining a precise diagnosis becomes increasingly difficult as renal function reaches values close to those of end-stage kidney disease.'"
-    ]
+  "logit": "0.69",
+  "analysis": "The patient, a 46-year-old female with End-Stage Renal Disease (ESRD) due to chronic glomerulonephritis, exhibits several concerning trends at the final time-point. Notably, her blood potassium level is 3.11 mmol/L, significantly below the reference range for ESRD patients (>4 mmol/L), indicating a potential risk for cardiac arrhythmias and muscle weakness. Additionally, her albumin level is 30.2 g/L, which is lower than the reference range for ESRD patients (>32 g/L), suggesting malnutrition or inadequate protein intake. Despite these concerning biochemical markers, her food intake (3495.67 g) is higher than the median values for both survival and deceased patients, which may indicate an attempt to compensate for nutritional deficits but could also contribute to fluid overload. The AI model's high importance weights for blood potassium and albumin underscore their critical roles in predicting mortality risk, with hypokalemia and hypoalbuminemia being significant indicators of poor prognosis in ESRD patients. The patient's systolic blood pressure (130 mmHg) and diastolic blood pressure (85 mmHg) are within the higher reference range for ESRD patients, suggesting ongoing cardiovascular stress. Overall, the patient's condition is precarious, with significant risks related to electrolyte imbalances, nutritional status, and cardiovascular health, all of which are critical in ESRD management.",
+  "evidences": [
+    "Document [1]: Hemodialysis - Genitourinary Disorders - MSD Manual Professional Edition - 'Hypotension has multiple causes, including too-rapid water removal, osmotic fluid shifts across cell membranes, acetate in the dialysate, heat-related vasodilation, allergic reactions, sepsis, and underlying conditions (eg, autonomic neuropathy, cardiomyopathy with poor ejection fraction, myocardial ischemia, arrhythmias).'",
+    "Document [3]: Chronic Kidney Disease - Genitourinary Disorders - MSD Manual Professional Edition - 'Anemia is a common complication of moderate to advanced CKD (\u2265 stage 3) and, when severe, can cause symptoms such as fatigue, pallor, and dyspnea. The anemia of CKD is normochromic-normocytic, with a hematocrit of 20 to 30% (35 to 40% in patients with polycystic kidney disease). It is usually caused by deficient erythropoietin production due to a reduction of functional renal mass.'",
+    "Document [3]: Chronic Kidney Disease - Genitourinary Disorders - MSD Manual Professional Edition - 'Patients with CKD have small shrunken kidneys (usually \u2264 10 cm in length) with thinned, hyperechoic cortex. Obtaining a precise diagnosis becomes increasingly difficult as renal function reaches values close to those of end-stage kidney disease.'"
+  ]
 }
 ```
 
@@ -111,18 +113,18 @@ Food intake (with water): with importance weight of 0.707 out of 1.0. The featur
 
 ```json
 {
-    "answer": "In my opinion, the patient has a high risk of mortality.",
-    "report": "The patient, a 46-year-old female with End-Stage Renal Disease (ESRD) due to chronic glomerulonephritis, exhibits several concerning trends that collectively indicate a high mortality risk. Key features include metabolic acidosis (carbon dioxide binding power of 18.7 mmol/L), hypoalbuminemia (albumin level of 30.2 g/L), and hypokalemia (blood potassium level of 3.11 mmol/L). These biochemical abnormalities suggest significant nutritional deficits, electrolyte imbalances, and potential cardiovascular risks. Despite a higher food intake, the patient's nutritional status remains compromised, indicating poor nutrient absorption or increased metabolic demands. Additionally, the patient's blood pressure, while within the higher reference range, suggests ongoing cardiovascular stress. These factors collectively contribute to a precarious condition with significant risks related to electrolyte imbalances, nutritional status, and cardiovascular health, all of which are critical in ESRD management.",
-    "evidences": [
-        [
-            "Chronic Kidney Disease - Genitourinary Disorders - MSD Manual Professional Edition: 'Moderate metabolic acidosis (plasma bicarbonate content 15 to 20 mmol/L) is characteristic. Acidosis causes muscle wasting due to protein catabolism, bone loss due to bone buffering of acid, and accelerated progression of kidney disease.'",
-            "Chronic Kidney Disease - Genitourinary Disorders - MSD Manual Professional Edition: 'Undernutrition leading to generalized tissue wasting is a prominent feature of chronic uremia.'"
-        ],
-        [
-            "Hemodialysis - Genitourinary Disorders - MSD Manual Professional Edition - 'Hypotension has multiple causes, including too-rapid water removal, osmotic fluid shifts across cell membranes, acetate in the dialysate, heat-related vasodilation, allergic reactions, sepsis, and underlying conditions (eg, autonomic neuropathy, cardiomyopathy with poor ejection fraction, myocardial ischemia, arrhythmias).'",
-            "Chronic Kidney Disease - Genitourinary Disorders - MSD Manual Professional Edition - 'Anemia is a common complication of moderate to advanced CKD (\u2265 stage 3) and, when severe, can cause symptoms such as fatigue, pallor, and dyspnea. The anemia of CKD is normochromic-normocytic, with a hematocrit of 20 to 30% (35 to 40% in patients with polycystic kidney disease). It is usually caused by deficient erythropoietin production due to a reduction of functional renal mass.'"
-        ]
+  "answer": "In my opinion, the patient has a high risk of mortality.",
+  "report": "The patient, a 46-year-old female with End-Stage Renal Disease (ESRD) due to chronic glomerulonephritis, exhibits several concerning trends that collectively indicate a high mortality risk. Key features include metabolic acidosis (carbon dioxide binding power of 18.7 mmol/L), hypoalbuminemia (albumin level of 30.2 g/L), and hypokalemia (blood potassium level of 3.11 mmol/L). These biochemical abnormalities suggest significant nutritional deficits, electrolyte imbalances, and potential cardiovascular risks. Despite a higher food intake, the patient's nutritional status remains compromised, indicating poor nutrient absorption or increased metabolic demands. Additionally, the patient's blood pressure, while within the higher reference range, suggests ongoing cardiovascular stress. These factors collectively contribute to a precarious condition with significant risks related to electrolyte imbalances, nutritional status, and cardiovascular health, all of which are critical in ESRD management.",
+  "evidences": [
+    [
+      "Chronic Kidney Disease - Genitourinary Disorders - MSD Manual Professional Edition: 'Moderate metabolic acidosis (plasma bicarbonate content 15 to 20 mmol/L) is characteristic. Acidosis causes muscle wasting due to protein catabolism, bone loss due to bone buffering of acid, and accelerated progression of kidney disease.'",
+      "Chronic Kidney Disease - Genitourinary Disorders - MSD Manual Professional Edition: 'Undernutrition leading to generalized tissue wasting is a prominent feature of chronic uremia.'"
+    ],
+    [
+      "Hemodialysis - Genitourinary Disorders - MSD Manual Professional Edition - 'Hypotension has multiple causes, including too-rapid water removal, osmotic fluid shifts across cell membranes, acetate in the dialysate, heat-related vasodilation, allergic reactions, sepsis, and underlying conditions (eg, autonomic neuropathy, cardiomyopathy with poor ejection fraction, myocardial ischemia, arrhythmias).'",
+      "Chronic Kidney Disease - Genitourinary Disorders - MSD Manual Professional Edition - 'Anemia is a common complication of moderate to advanced CKD (\u2265 stage 3) and, when severe, can cause symptoms such as fatigue, pallor, and dyspnea. The anemia of CKD is normochromic-normocytic, with a hematocrit of 20 to 30% (35 to 40% in patients with polycystic kidney disease). It is usually caused by deficient erythropoietin production due to a reduction of functional renal mass.'"
     ]
+  ]
 }
 ```
 
@@ -134,14 +136,14 @@ Food intake (with water): with importance weight of 0.707 out of 1.0. The featur
 
 ```json
 {
-    "answer": "agree",
-    "confidence": 3,
-    "reason": "The meta doctor's opinion aligns with the critical findings of metabolic acidosis, hypoalbuminemia, and hypokalemia, which are significant indicators of poor prognosis in ESRD. My previous analysis did not fully emphasize the severity of these electrolyte imbalances and their combined impact on cardiovascular health. The high food intake, while noted, does not mitigate the severe nutritional deficits indicated by hypoalbuminemia. The inclusion of hypokalemia in the meta doctor's assessment is crucial, as it directly relates to cardiovascular risks and overall metabolic stability, which are paramount in ESRD management.",
-    "evidences": [
-        "Document [1]: 'Moderate metabolic acidosis (plasma bicarbonate content 15 to 20 mmol/L) is characteristic. Acidosis causes muscle wasting due to protein catabolism, bone loss due to bone buffering of acid, and accelerated progression of kidney disease.'",
-        "Document [1]: 'Anemia is characteristic of moderate to advanced CKD (\u2265 stage 3). The anemia of CKD is normochromic-normocytic, with a hematocrit of 20 to 30% (35 to 40% in patients with polycystic kidney disease).'",
-        "Document [1]: 'Potassium-sparing diuretics, angiotensin-converting enzyme inhibitors, beta-blockers, nonsteroidal anti-inflammatory drugs may raise plasma potassium levels in patients with less advanced renal failure.'"
-    ]
+  "answer": "agree",
+  "confidence": 3,
+  "reason": "The meta doctor's opinion aligns with the critical findings of metabolic acidosis, hypoalbuminemia, and hypokalemia, which are significant indicators of poor prognosis in ESRD. My previous analysis did not fully emphasize the severity of these electrolyte imbalances and their combined impact on cardiovascular health. The high food intake, while noted, does not mitigate the severe nutritional deficits indicated by hypoalbuminemia. The inclusion of hypokalemia in the meta doctor's assessment is crucial, as it directly relates to cardiovascular risks and overall metabolic stability, which are paramount in ESRD management.",
+  "evidences": [
+    "Document [1]: 'Moderate metabolic acidosis (plasma bicarbonate content 15 to 20 mmol/L) is characteristic. Acidosis causes muscle wasting due to protein catabolism, bone loss due to bone buffering of acid, and accelerated progression of kidney disease.'",
+    "Document [1]: 'Anemia is characteristic of moderate to advanced CKD (\u2265 stage 3). The anemia of CKD is normochromic-normocytic, with a hematocrit of 20 to 30% (35 to 40% in patients with polycystic kidney disease).'",
+    "Document [1]: 'Potassium-sparing diuretics, angiotensin-converting enzyme inhibitors, beta-blockers, nonsteroidal anti-inflammatory drugs may raise plasma potassium levels in patients with less advanced renal failure.'"
+  ]
 }
 ```
 
@@ -149,14 +151,14 @@ Food intake (with water): with importance weight of 0.707 out of 1.0. The featur
 
 ```json
 {
-    "answer": "agree",
-    "confidence": 3,
-    "reason": "The meta doctor's opinion highlights critical factors that were overlooked in my initial analysis. Specifically, the presence of metabolic acidosis, hypoalbuminemia, and hypokalemia are significant indicators of a high mortality risk. Metabolic acidosis (carbon dioxide binding power of 18.7 mmol/L) can lead to muscle wasting, bone loss, and accelerated kidney disease progression (Document [1]). Hypoalbuminemia (albumin level of 30.2 g/L) suggests poor nutritional status and increased susceptibility to infections and fluid retention, which are common complications in ESRD patients (Document [1]). Hypokalemia (blood potassium level of 3.11 mmol/L) can cause cardiac arrhythmias and muscle weakness, further complicating the patient's condition (Document [1]). These factors, combined with the patient's higher diastolic blood pressure, indicate ongoing cardiovascular stress, which is a major risk factor in ESRD. Therefore, these key features collectively suggest a high mortality risk, aligning with the meta doctor's opinion.",
-    "evidences": [
-        "Document [1]: Decreased renal function interferes with the kidneys\u2019 ability to maintain fluid and electrolyte homeostasis. Moderate metabolic acidosis (plasma bicarbonate content 15 to 20 mmol/L) is characteristic. Acidosis causes muscle wasting due to protein catabolism, bone loss due to bone buffering of acid, and accelerated progression of kidney disease.",
-        "Document [1]: Anemia is characteristic of moderate to advanced CKD (\u2265 stage 3). The anemia of CKD is normochromic-normocytic, with a hematocrit of 20 to 30% (35 to 40% in patients with polycystic kidney disease).",
-        "Document [1]: Potassium-sparing diuretics, angiotensin-converting enzyme inhibitors, beta-blockers, nonsteroidal anti-inflammatory drugs may raise plasma potassium levels in patients with less advanced renal failure."
-    ]
+  "answer": "agree",
+  "confidence": 3,
+  "reason": "The meta doctor's opinion highlights critical factors that were overlooked in my initial analysis. Specifically, the presence of metabolic acidosis, hypoalbuminemia, and hypokalemia are significant indicators of a high mortality risk. Metabolic acidosis (carbon dioxide binding power of 18.7 mmol/L) can lead to muscle wasting, bone loss, and accelerated kidney disease progression (Document [1]). Hypoalbuminemia (albumin level of 30.2 g/L) suggests poor nutritional status and increased susceptibility to infections and fluid retention, which are common complications in ESRD patients (Document [1]). Hypokalemia (blood potassium level of 3.11 mmol/L) can cause cardiac arrhythmias and muscle weakness, further complicating the patient's condition (Document [1]). These factors, combined with the patient's higher diastolic blood pressure, indicate ongoing cardiovascular stress, which is a major risk factor in ESRD. Therefore, these key features collectively suggest a high mortality risk, aligning with the meta doctor's opinion.",
+  "evidences": [
+    "Document [1]: Decreased renal function interferes with the kidneys\u2019 ability to maintain fluid and electrolyte homeostasis. Moderate metabolic acidosis (plasma bicarbonate content 15 to 20 mmol/L) is characteristic. Acidosis causes muscle wasting due to protein catabolism, bone loss due to bone buffering of acid, and accelerated progression of kidney disease.",
+    "Document [1]: Anemia is characteristic of moderate to advanced CKD (\u2265 stage 3). The anemia of CKD is normochromic-normocytic, with a hematocrit of 20 to 30% (35 to 40% in patients with polycystic kidney disease).",
+    "Document [1]: Potassium-sparing diuretics, angiotensin-converting enzyme inhibitors, beta-blockers, nonsteroidal anti-inflammatory drugs may raise plasma potassium levels in patients with less advanced renal failure."
+  ]
 }
 ```
 
@@ -164,15 +166,15 @@ Food intake (with water): with importance weight of 0.707 out of 1.0. The featur
 
 ```json
 {
-    "answer": "agree",
-    "confidence": 3,
-    "reason": "The synthesized report accurately captures the critical issues affecting the patient's prognosis. The patient's hypokalemia, hypoalbuminemia, and metabolic acidosis are significant indicators of poor prognosis in ESRD patients, as highlighted in Document [1]. Hypokalemia can lead to severe cardiac arrhythmias and muscle weakness, while hypoalbuminemia suggests inadequate protein intake or malnutrition, both of which are associated with increased mortality risk. The patient's higher food intake, while attempting to compensate for nutritional deficits, may also contribute to fluid overload, a common complication in ESRD. The ongoing cardiovascular stress indicated by the patient's blood pressure further exacerbates her condition. These factors collectively contribute to a high mortality risk, aligning with the meta doctor's opinion.",
-    "evidences": [
-        "Document [1]: 'Anemia is characteristic of moderate to advanced CKD (\u2265 stage 3). The anemia of CKD is normochromic-normocytic, with a hematocrit of 20 to 30% (35 to 40% in patients with polycystic kidney disease). It is usually caused by deficient erythropoietin production due to a reduction of functional renal mass.'",
-        "Document [1]: 'Decreased renal function interferes with the kidneys\u2019 ability to maintain fluid and electrolyte homeostasis. The ability to concentrate urine declines early and is followed by decreases in ability to excrete excess phosphate, acid, and potassium.'",
-        "Document [1]: 'Hypertension is present in > 80% of patients with advanced CKD and is usually related to hypervolemia.'",
-        "Document [3]: 'Volume overload generally refers to expansion of the extracellular fluid (ECF) volume. ECF volume expansion typically occurs in heart failure, acute or chronic kidney failure, nephrotic syndrome, and cirrhosis.'"
-    ]
+  "answer": "agree",
+  "confidence": 3,
+  "reason": "The synthesized report accurately captures the critical issues affecting the patient's prognosis. The patient's hypokalemia, hypoalbuminemia, and metabolic acidosis are significant indicators of poor prognosis in ESRD patients, as highlighted in Document [1]. Hypokalemia can lead to severe cardiac arrhythmias and muscle weakness, while hypoalbuminemia suggests inadequate protein intake or malnutrition, both of which are associated with increased mortality risk. The patient's higher food intake, while attempting to compensate for nutritional deficits, may also contribute to fluid overload, a common complication in ESRD. The ongoing cardiovascular stress indicated by the patient's blood pressure further exacerbates her condition. These factors collectively contribute to a high mortality risk, aligning with the meta doctor's opinion.",
+  "evidences": [
+    "Document [1]: 'Anemia is characteristic of moderate to advanced CKD (\u2265 stage 3). The anemia of CKD is normochromic-normocytic, with a hematocrit of 20 to 30% (35 to 40% in patients with polycystic kidney disease). It is usually caused by deficient erythropoietin production due to a reduction of functional renal mass.'",
+    "Document [1]: 'Decreased renal function interferes with the kidneys\u2019 ability to maintain fluid and electrolyte homeostasis. The ability to concentrate urine declines early and is followed by decreases in ability to excrete excess phosphate, acid, and potassium.'",
+    "Document [1]: 'Hypertension is present in > 80% of patients with advanced CKD and is usually related to hypervolemia.'",
+    "Document [3]: 'Volume overload generally refers to expansion of the extracellular fluid (ECF) volume. ECF volume expansion typically occurs in heart failure, acute or chronic kidney failure, nephrotic syndrome, and cirrhosis.'"
+  ]
 }
 ```
 
