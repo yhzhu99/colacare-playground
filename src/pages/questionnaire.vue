@@ -8,25 +8,43 @@ let chart = null
 
 // Timeline data and indicators remain the same
 const timelineData = {
-  albumin: [35.0, 32.0, 30.0, 28.0, 25.0, 23.0, 22.3],
-  phos: [1.30, 1.15, 1.35, 1.28, 1.25, 1.10, 0.93],
-  co2cp: [28.5, 29.2, 30.1, 30.8, 31.2, 31.5, 31.8],
-  wbc: [8.5, 9.2, 10.5, 12.1, 13.4, 14.0, 14.72],
-  glucose: [15.2, 16.8, 18.1, 19.5, 20.2, 21.4, 22.1],
-  urea: [6.8, 7.2, 7.8, 8.2, 8.7, 9.0, 9.3],
-  crp: [45.2, 58.4, 72.6, 85.3, 98.7, 108.5, 117.01],
-  potassium: [4.2, 3.9, 3.7, 3.5, 3.3, 3.2, 3.09],
+  cl: [99.0, 99.0, 100.0, 102.0, 102.0, 102.0, 98.0, 101.0, 99.9, 100.0, 102.0, 102.0, 100.0, 98.0, 92.0, 96.0, 101.0, 101.0, 93.0, 96.0, 101.0, 97.0, 101.0, 97.0, 102.0, 100.0, 99.0, 100.0, 99.0, 96.0, 98.0],
+  co2cp: [22.9, 22.9, 25.6, 24.5, 24.5, 26.3, 22.5, 22.2, 24.0, 22.6, 24.3, 24.3, 21.7, 26.4, 26.6, 29.0, 26.7, 26.7, 27.7, 26.2, 25.9, 26.8, 22.6, 23.2, 24.3, 23.1, 25.1, 26.3, 25.0, 20.4, 18.7],
+  wbc: [8.2, 8.4, 8.67, 7.7, 7.3, 7.3, 7.71, 8.64, 8.75, 6.76, 7.5, 6.54, 8.4, 8.21, 11.3, 9.5, 8.9, 8.9, 8.02, 8.17, 8.06, 8.06, 7.73, 7.73, 7.54, 7.32, 8.23, 6.66, 8.04, 9.6, 8.6],
+  hb: [91.0, 103.0, 117.0, 137.0, 161.0, 90.0, 118.0, 109.0, 123.0, 118.0, 121.0, 119.0, 109.0, 115.0, 130.0, 125.0, 118.0, 118.0, 116.0, 111.0, 118.0, 118.0, 122.0, 122.0, 125.0, 119.0, 129.0, 118.0, 113.0, 115.0, 133.0],
+  urea: [24.0, 24.0, 22.1, 24.2, 24.0, 27.8, 27.8, 30.5, 30.5, 31.6, 24.5, 24.5, 24.5, 28.5, 15.8, 20.3, 26.3, 30.9, 21.4, 31.8, 28.3, 15.7, 22.8, 26.1, 25.5, 26.5, 22.9, 21.9, 26.3, 19.6, 15.2],
+  ca: [2.43, 2.43, 2.47, 2.52, 2.5, 2.38, 2.38, 2.32, 2.32, 2.34, 2.36, 2.36, 2.36, 2.46, 2.41, 2.41, 2.46, 2.29, 2.53, 2.54, 2.49, 2.42, 2.37, 2.53, 2.56, 2.51, 2.77, 2.52, 2.63, 2.61, 2.43],
+  k: [3.74, 3.74, 3.75, 3.67, 3.55, 4.41, 4.41, 4.13, 4.13, 3.61, 3.72, 3.72, 3.72, 3.62, 3.74, 4.17, 4.63, 4.63, 4.33, 3.72, 3.86, 3.71, 3.53, 3.65, 4.55, 4.33, 3.78, 3.85, 4.55, 3.58, 3.11],
+  na: [141.5, 141.5, 139.2, 140.3, 139.6, 141.0, 141.0, 141.0, 141.0, 142.0, 143.0, 143.0, 143.0, 136.0, 132.0, 138.0, 139.0, 139.0, 132.0, 138.0, 140.0, 139.0, 140.0, 137.0, 142.0, 140.0, 141.0, 140.0, 140.0, 137.0, 136.0],
+  scr: [1114.0, 1114.0, 1189.0, 1084.0, 1087.0, 1009.0, 1009.0, 1104.0, 1104.0, 1181.0, 1031.0, 1031.0, 1031.0, 961.0, 841.0, 991.0, 954.0, 916.0, 892.0, 912.0, 852.0, 913.0, 822.0, 833.0, 795.0, 838.0, 881.0, 850.0, 776.0, 778.0, 768.0],
+  p: [2.33, 2.33, 1.75, 1.61, 2.21, 1.88, 1.88, 2.34, 2.34, 2.01, 2.17, 2.17, 2.17, 2.2, 1.51, 1.9, 1.53, 2.03, 1.76, 1.91, 1.55, 1.63, 2.05, 1.33, 1.88, 1.81, 1.96, 1.99, 1.9, 1.86, 1.42],
+  albumin: [41.0, 41.0, 40.0, 41.0, 40.0, 38.0, 38.0, 39.0, 39.0, 37.0, 37.0, 37.0, 37.0, 37.0, 35.5, 37.6, 38.3, 38.3, 35.3, 35.6, 36.0, 36.0, 35.4, 34.5, 35.6, 34.3, 35.2, 33.0, 35.4, 31.8, 30.2],
+  crp: [0.07, 0.07, 0.08, 0.08, 3.81, 3.81, 2.25, 8.66, 7.43, 2.83, 5.11, 5.11, 20.25, 16.8, 15.39, 12.5, 11.44, 11.44, 9.24, 9.24, 2.83, 2.83, 13.57, 13.57, 13.57, 13.57, 2.05, 1.76, 1.76, 12.93, 7.17],
+  glucose: [8.6, 8.6, 5.6, 6.3, 6.0, 7.3, 7.3, 8.1, 8.1, 5.6, 8.2, 8.2, 8.2, 11.3, 11.3, 9.3, 7.8, 7.8, 6.7, 6.7, 8.6, 8.6, 8.6, 8.6, 8.6, 9.4, 11.5, 8.9, 11.4, 16.8, 14.7],
+  appetite: [2073.78, 2778.0, 2173.24, 1019.5, 1019.5, 1019.5, 3278.07, 1355.89, 2834.46, 2834.46, 2834.46, 2907.1, 2907.1, 2907.1, 2474.7, 2474.7, 2474.7, 2474.7, 2474.7, 3495.67, 3495.67, 3495.67, 3495.67, 3495.67, 3495.67, 3495.67, 3495.67, 3495.67, 3495.67, 3495.67, 3495.67],
+  weight: [68.55, 68.09, 67.78, 67.15, 66.8, 66.34, 65.36, 64.97, 64.23, 64.05, 63.6, 63.14, 62.68, 62.2, 65.0, 65.0, 63.0, 63.15, 68.0, 67.22, 66.42, 65.71, 64.0, 64.31, 66.0, 64.81, 61.0, 61.0, 64.0, 64.0, 64.0],
+  sbp: [130.0, 160.0, 130.0, 145.0, 145.0, 154.0, 158.0, 135.0, 130.0, 140.0, 150.0, 150.0, 150.0, 150.0, 135.0, 163.0, 130.0, 175.0, 140.0, 140.0, 140.0, 145.0, 140.0, 140.0, 140.0, 140.0, 135.0, 135.0, 137.0, 130.0, 130.0],
+  dbp: [80.0, 90.0, 70.0, 80.0, 80.0, 80.0, 80.0, 90.0, 75.0, 90.0, 80.0, 80.0, 85.0, 95.0, 80.0, 106.0, 85.0, 105.0, 83.0, 83.0, 90.0, 90.0, 80.0, 80.0, 90.0, 87.0, 80.0, 84.0, 80.0, 80.0, 85.0],
 }
 
 const indicators = [
-  { id: 'albumin', name: 'Albumin', value: '22.3', unit: 'g/L' },
-  { id: 'phos', name: 'Phosphate', value: '0.93', unit: 'mmol/L' },
-  { id: 'co2cp', name: 'CO2CP', value: '31.8', unit: 'mmol/L' },
-  { id: 'wbc', name: 'WBC', value: '14.72', unit: '10^9/L' },
-  { id: 'glucose', name: 'Glucose', value: '22.1', unit: 'mmol/L' },
-  { id: 'urea', name: 'Urea', value: '9.3', unit: 'mmol/L' },
-  { id: 'crp', name: 'hs-CRP', value: '117.01', unit: 'mg/L' },
-  { id: 'potassium', name: 'Potassium', value: '3.09', unit: 'mmol/L' },
+  { id: 'cl', name: 'Chlorine', unit: 'mmol/L', value: '98.0' },
+  { id: 'co2cp', name: 'CO2CP', unit: 'mmol/L', value: '18.7' },
+  { id: 'wbc', name: 'WBC', unit: '×10^9/L', value: '8.6' },
+  { id: 'hb', name: 'HGB', unit: 'g/L', value: '133.0' },
+  { id: 'urea', name: 'Urea', unit: 'mmol/L', value: '15.2' },
+  { id: 'ca', name: 'Calcium', unit: 'mmol/L', value: '2.43' },
+  { id: 'k', name: 'Potassium', unit: 'mmol/L', value: '3.11' },
+  { id: 'na', name: 'Sodium', unit: 'mmol/L', value: '136.0' },
+  { id: 'scr', name: 'SCR', unit: 'μmol/L', value: '768.0' },
+  { id: 'p', name: 'PHOS', unit: 'mmol/L', value: '1.42' },
+  { id: 'albumin', name: 'Albumin', unit: 'g/L', value: '30.2' },
+  { id: 'crp', name: 'hs-CRP', unit: 'mg/L', value: '7.17' },
+  { id: 'glucose', name: 'Glucose', unit: 'mmol/L', value: '14.7' },
+  { id: 'appetite', name: 'Food intake', unit: 'g', value: '3495.67' },
+  { id: 'weight', name: 'Weight', unit: 'kg', value: '64.0' },
+  { id: 'sbp', name: 'Systolic pressure', unit: 'mmHg', value: '130.0' },
+  { id: 'dbp', name: 'Diastolic pressure', unit: 'mmHg', value: '85.0' },
 ]
 
 // Updated toggle function
@@ -126,7 +144,7 @@ function updateChart() {
     },
     xAxis: {
       type: 'category',
-      data: ['2018.04', '2018.10', '2019.04', '2019.10', '2020.04', '2020.10', '2021.04'],
+      data: ['2007-07', '2007-10', '2007-12', '2008-04', '2008-07', '2008-10', '2009-04', '2009-07', '2009-11', '2010-01', '2010-04', '2010-07', '2010-10', '2011-01', '2011-08', '2011-12', '2012-03', '2012-04', '2012-06', '2012-08', '2012-10', '2012-12', '2013-02', '2013-03', '2013-08', '2013-10', '2014-03', '2014-06', '2014-10', '2015-01', '2015-03'],
       name: 'Time',
       nameLocation: 'middle',
       nameGap: 30,
@@ -219,11 +237,11 @@ onUnmounted(() => {
                   Original Disease:
                 </h2>
                 <div class="disease-name">
-                  Diabetic Nephropathy
+                  Chronic glomerulonephritis
                 </div>
               </div>
               <div class="patient-tag">
-                ID: a7
+                ID: a1
               </div>
             </div>
 
@@ -241,7 +259,7 @@ onUnmounted(() => {
                   Age
                 </div>
                 <div class="value">
-                  75 years
+                  46 years
                 </div>
               </div>
               <div class="demo-item">
@@ -249,7 +267,7 @@ onUnmounted(() => {
                   Height
                 </div>
                 <div class="value">
-                  154.9 cm
+                  159.4 cm
                 </div>
               </div>
               <div class="demo-item">
@@ -257,10 +275,10 @@ onUnmounted(() => {
                   Weight
                 </div>
                 <div class="value">
-                  58.0 kg
+                  68.5 kg
                 </div>
               </div>
-              <div class="demo-item">
+              <!-- <div class="demo-item">
                 <div class="label">
                   BMI
                 </div>
@@ -273,9 +291,9 @@ onUnmounted(() => {
                   Comorbidities
                 </div>
                 <div class="value">
-                  Diabetes, Heart Disease
+                  Diabetes
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
 
@@ -283,11 +301,14 @@ onUnmounted(() => {
           <div class="report-card">
             <h3>AI Generated Patient Report</h3>
             <p class="report-content">
-              75-year-old female patient with a history of Diabetic Nephropathy as the primary condition.
-              Patient exhibits multiple comorbidities including diabetes and heart disease. Recent laboratory
-              indicators show concerning trends with declining albumin levels (22.3 g/L) and elevated WBC
-              (14.72 10^9/L), suggesting potential inflammatory processes. Patient's condition deteriorated
-              progressively, leading to death in April 2012 due to Peripheral vascular disease.
+              The patient, a 46-year-old female with End-Stage Renal Disease (ESRD) due to chronic glomerulonephritis,
+              exhibits significant biochemical abnormalities including metabolic acidosis, hypoalbuminemia, and
+              hypokalemia. These conditions indicate severe nutritional deficits, electrolyte imbalances, and potential
+              cardiovascular risks. Despite increased food intake, the patient's nutritional status remains compromised,
+              suggesting poor nutrient absorption or increased metabolic demands. Additionally, the patient's blood
+              pressure, while within the higher reference range, suggests ongoing cardiovascular stress. These factors
+              collectively contribute to a precarious condition with significant risks related to electrolyte
+              imbalances, nutritional status, and cardiovascular health, all of which are critical in ESRD management.
             </p>
           </div>
 
@@ -299,7 +320,7 @@ onUnmounted(() => {
                 v-for="indicator in indicators" :key="indicator.id" class="indicator-btn"
                 :class="[{ active: activeIndicators.includes(indicator.id) }]" @click="toggleIndicator(indicator.id)"
               >
-                {{ indicator.name }} ({{ indicator.value }} {{ indicator.unit }})
+                {{ indicator.name }}
               </button>
             </div>
           </div>
@@ -319,8 +340,8 @@ onUnmounted(() => {
             <div class="outcome-info">
               <h4>Patient Outcome</h4>
               <div class="outcome-details">
-                <p><strong>Date of Death:</strong> 2012-04</p>
-                <p><strong>Cause of Death:</strong> Peripheral vascular disease</p>
+                <p><strong>Date of Death:</strong> 2015-05</p>
+                <p><strong>Cause of Death:</strong> Sudden cardiac death</p>
               </div>
             </div>
 
@@ -363,8 +384,10 @@ onUnmounted(() => {
   padding: 20px;
   display: grid;
   gap: 4px;
-  grid-template-columns: 450px 1fr; /* Increased from 380px */
-  max-width: 2200px; /* Add this line to set maximum width */
+  grid-template-columns: 450px 1fr;
+  /* Increased from 380px */
+  max-width: 2200px;
+  /* Add this line to set maximum width */
   width: 100%;
 }
 
@@ -374,11 +397,14 @@ onUnmounted(() => {
   align-items: center;
   justify-content: center;
   width: 100%;
-  max-width: 2200px; /* Add this line */
-  margin: 0 auto; /* Add this line */
+  max-width: 2200px;
+  /* Add this line */
+  margin: 0 auto;
+  /* Add this line */
 }
 
-.left-panel, .right-panel {
+.left-panel,
+.right-panel {
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -441,7 +467,8 @@ onUnmounted(() => {
 }
 
 .chart-container {
-  height: 330px; /* Increased from 400px */
+  height: 330px;
+  /* Increased from 400px */
   width: 100%;
   margin: 20px 0;
 }
@@ -615,7 +642,8 @@ onUnmounted(() => {
 .options label {
   display: flex;
   gap: 10px;
-  align-items: flex-start; font-size: 14px;
+  align-items: flex-start;
+  font-size: 14px;
   padding: 8px;
   background: #f8f9fa;
   border-radius: 6px;
@@ -664,7 +692,9 @@ h4 {
   font-size: 14px;
 }
 
-@media (max-width: 2000px) { /* Increased from 1400px */
+@media (max-width: 2000px) {
+
+  /* Increased from 1400px */
   .medical-dashboard {
     grid-template-columns: 1fr;
   }
@@ -675,6 +705,7 @@ h4 {
 }
 
 @media (max-width: 768px) {
+
   .demographics-grid,
   .indicators-grid,
   .features-grid {
