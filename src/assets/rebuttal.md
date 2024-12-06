@@ -1,8 +1,15 @@
 # Rebuttal
 
-We sincerely thank all reviewers for your positive recognition of our work and your insightful and constructive feedback! We thank R1 and R5 for your recognition of the paper's presentation and clear, well-written content. We thank R1, R3, and R5 for acknowledging the promising direction and originality of our LLM-based approach in healthcare. We thank R3, R4, and R5 for recognizing the effectiveness of our well-designed agent-based architecture, particularly the collaboration between DoctorAgents and MetaAgent for robust decision-making. We thank R1 and R3 for highlighting our work's potential impact on healthcare professionals and clinical decision-making. Furthermore, We appreciate R4 and R5's recognition of our comprehensive evaluation across multiple real-world datasets (MIMIC-IV, CDSL, and ESRD), which demonstrated clear improvements over baseline models.
+Dear Program Chairs, Senior Area Chairs, Area Chairs, and Reviewers,
 
-## R1
+We sincerely thank all reviewers for their positive recognition of our work and their insightful, constructive feedback.
+
+We thank Reviewers #vxpv and #JUfE for recognizing the paper's clear and well-written presentation. We appreciate Reviewers #vxpv, #mvV9, and #JUfE for acknowledging the promising direction and originality of our LLM-based approach in healthcare. We thank Reviewers #mvV9, #GWg2, and #JUfE for recognizing the effectiveness of our **well-designed agent-based architecture**, particularly the collaboration between DoctorAgents and MetaAgent for robust decision-making. We thank Reviewers #vxpv and #mvV9 for highlighting our work's **potential impact on healthcare professionals and clinical decision-making**. Furthermore, we appreciate Reviewers #KcGx, #GWg2 and #JUfE's recognition of our **comprehensive evaluation** across multiple real-world datasets (MIMIC-IV, CDSL, and ESRD), which demonstrated consistently better performance over baseline models.
+
+Best regards,
+Authors of Paper #542
+
+## Response to Reviewer #vxpv
 
 We appreciate your recognition of our research direction and your insights highlighting valuable areas for future development. Additional rebuttal details, including **human evaluation questionnaires**, are available on our anonymized website (https://colacare.netlify.app/questionnaire).
 
@@ -45,7 +52,7 @@ Our ColaCare has consistent performance improvements across diverse datasets and
 
 We employed a systematic human evaluation using peritoneal dialysis patient data. We engaged 12 experienced medical practitioners (5-15 years of experience) from nephrology departments across 5 hospitals. Practitioners rated agreement levels (1-5) for each patient case. ColaCare achieved a mean score of 4.4 vs. ConCare's 3.2, demonstrating strong alignment with expert clinical judgment. Blinded evaluations confirm that ColaCare's interpretability closely matches human expert practice patterns. (Check https://colacare.netlify.app/questionnaire)
 
-## R2
+## Response to Reviewer #KcGx
 
 Thank you for your thoughtful review and recognition of ColaCare's contributions! We appreciate your suggestions and address each of your questions below:
 
@@ -82,7 +89,7 @@ Thank you for these suggestions to improve readability. We will:
 
 We will better contextualize our research objectives within existing literature: bridging the gap between structured EHR data and clinical reasoning through a framework that combines domain-specific expert models with LLMs in a MDT inspired collaborative approach, ultimately providing both improved predictive performance and interpretable clinical decision support.
 
-## R3
+## Response to Reviewer #mvV9
 
 We appreciate your thorough evaluation and constructive feedback!
 
@@ -120,7 +127,10 @@ The baseline models (ConCare, AdaCare, RETAIN) were selected for their establish
 
 We employed M3Care, AICare, and PRISM as ColaCare's expert models (and compared them individually). Results validate ColaCare's effectiveness in enhancing performance through DoctorAgents, MetaAgent collaboration, debate, and LLM reasoning. Furthermore, we compared the latest EMERGE model (CIKM-2024) that incorporates external knowledge graphs and uses RAG, demonstrating that ColaCare performs better.
 
-*EMERGE: Enhancing Multimodal Electronic Health Records Predictive Modeling with Retrieval-Augmented Generation (CIKM, 2024)*
+- (KDD, 2022) M3Care: Learning with Missing Modalities in Multimodal Healthcare Data
+- (Cell Patterns, 2023) AICare: Mortality prediction with adaptive feature importance recalibration for peritoneal dialysis patients
+- (CIKM, 2024) PRISM: Mitigating EHR Data Sparsity via Learning from Missing Feature Calibrated Prototype Patient Representations
+- (CIKM, 2024) EMERGE: Enhancing Multimodal Electronic Health Records Predictive Modeling with Retrieval-Augmented Generation
 
 ### Q2 (Documents Integration with EHR-specific Methods)
 
@@ -157,11 +167,11 @@ We will include detailed AutoGen comparisons in revision. Our key distinction: d
 
 > The paper emphasizes its contribution by stating that it enhances transparency and provides human-understandable evidence to support physicians in their diagnostic reasoning. However, if I understand correctly, the validation of this evidence still relies on human experts, which doesn't fully address the issues of trustworthiness or transparency. Could the authors explore alternative methods to validate the evidence and strengthen their claims?
 
-ColaCare helps align clinical features with medical knowledge semantics, enabling clinicians to connect deep learning predictions with clinical guidelines and medical literature in human-understandable way. 
+ColaCare helps align clinical features with medical knowledge semantics, enabling clinicians to connect deep learning predictions with clinical guidelines and medical literature in human-understandable way.
 
 We employed a systematic human evaluation using peritoneal dialysis patient data. We engaged 12 experienced medical practitioners (5-15 years of experience) from nephrology departments across 5 hospitals. Practitioners rated agreement levels (1-5) for each patient case. ColaCare achieved a mean score of 4.4 vs. ConCare's 3.2, demonstrating strong alignment with expert clinical judgment. Blinded evaluations confirm that ColaCare's interpretability closely matches human expert practice patterns. (Check https://colacare.netlify.app/questionnaire)
 
-## R4
+## Response to Reviewer #GWg2
 
 We sincerely thank you for your thorough review and constructive feedback!
 
@@ -190,7 +200,7 @@ The results validate the effectiveness of our multi-agent collaborative framewor
 
 We fully agree that comprehensive evaluation is crucial in healthcare data analysis. Our initial metric selection (AUPRC, AUROC, min(P,Se)) was based on widely-used EHR benchmarks (MIMIC-III/IV) and recent COVID-19 prognosis prediction benchmarks in Cell Patterns. These threshold-independent metrics are particularly valuable for clinical risk ranking. Following your suggestion, we will add precision, recall, F1-score, and accuracy metrics in the revision.
 
-We've also expanded comparisons to include: 
+We've also expanded comparisons to include:
 1) SOTA ensemble learning methods to demonstrate ColaCare's advantages in knowledge-enhanced ensemble learning.
 
 |             Methods            |                    |  MIMIC-IV Outcome  |                          |                    | MIMIC-IV Readmission |                           |                    |    CDSL Outcome   |                           |                    |    ESRD Outcome    |                               |
@@ -242,7 +252,7 @@ We appreciate your valuable suggestion and have conducted a systematic human eva
 
 We agree that a larger, more diverse test set would strengthen our evaluation. We are expanding our test set to approximately 10,000 samples (10x increase) with k-fold cross-validation. If accepted, we will include these expanded results in the camera-ready version.
 
-## R5
+## Response to Reviewer #JUfE
 
 Thank you for your thoughtful review and positive feedback on our work. We appreciate your recognition of ColaCare's originality and importance in clinical decision-making!
 
