@@ -6,6 +6,17 @@ We sincerely thank all reviewers for their positive recognition of our work and 
 
 We thank Reviewers #vxpv and #JUfE for recognizing the paper's clear and well-written presentation. We appreciate Reviewers #vxpv, #mvV9, and #JUfE for acknowledging the promising direction and originality of our LLM-based approach in healthcare. We thank Reviewers #mvV9, #GWg2, and #JUfE for recognizing the effectiveness of our **well-designed agent-based architecture**, particularly the collaboration between DoctorAgents and MetaAgent for robust decision-making. We thank Reviewers #vxpv and #mvV9 for highlighting our work's **potential impact on healthcare professionals and clinical decision-making**. Furthermore, we appreciate Reviewers #KcGx, #GWg2 and #JUfE's recognition of our **comprehensive evaluation** across multiple real-world datasets (MIMIC-IV, CDSL, and ESRD), which demonstrated consistently better performance over baseline models.
 
+We have thoroughly addressed reviewer concerns across several key aspects:
+
+1. Multi-agent collaboration effectiveness and coordination
+2. Comprehensive experiments with additional LLMs and SOTA baselines
+3. Systematic human evaluation with experienced medical practitioners
+4. Detailed ablation studies validating our design choices.
+
+For reviewers' convenience, we have made complete code (https://colacare.netlify.app/code), available questionnaires (https://colacare.netlify.app/questionnaire), case studies (https://colacare.netlify.app/case), prompt designs (https://colacare.netlify.app/prompt), and our full rebuttal (https://colacare.netlify.app/rebuttal) at our anonymous website: https://colacare.netlify.app.
+
+ColaCare represents a significant advancement in clinical decision support by bridging the gap between structured EHR analysis and clinical reasoning. Our framework's demonstrated effectiveness, interpretability, and alignment with expert clinical judgment position it to meaningfully impact healthcare delivery and patient outcomes. We are committed to further developing and validating ColaCare to ensure its practical value in clinical settings.
+
 Best regards,
 Authors of Paper #542
 
