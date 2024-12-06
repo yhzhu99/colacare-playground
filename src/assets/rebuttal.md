@@ -1,6 +1,6 @@
 # Rebuttal
 
-
+We sincerely thank all reviewers for your positive recognition of our work and your insightful and constructive feedback! We thank R1 and R5 for your recognition of the paper's presentation and clear, well-written content. We thank R1, R3, and R5 for acknowledging the promising direction and originality of our LLM-based approach in healthcare. We thank R3, R4, and R5 for recognizing the effectiveness of our well-designed agent-based architecture, particularly the collaboration between DoctorAgents and MetaAgent for robust decision-making. We thank R1 and R3 for highlighting our work's potential impact on healthcare professionals and clinical decision-making. Furthermore, We appreciate R4 and R5's recognition of our comprehensive evaluation across multiple real-world datasets (MIMIC-IV, CDSL, and ESRD), which demonstrated clear improvements over baseline models.
 
 ## R1
 
