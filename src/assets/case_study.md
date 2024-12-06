@@ -8,8 +8,6 @@ Here is the patient record, including the patient's basic information, multivari
 This female patient, aged 46.33, is an End-Stage Renal Disease(ESRD) patient with original disease Chronic glomerulonephritis.
 
 Here is multivariate time-series electronic health record data of the patient, a structured collection of patient information comprising multiple clinical variables measured at various time points across multiple patient visits, represented as sequences of numerical values for each feature.
-The patient's EHR data is recorded at the following time points:
-2007-07-17, 2007-10-16, 2007-12-18, 2008-04-22, 2008-07-01, 2008-10-01, 2009-04-14, 2009-07-01, 2009-11-25, 2010-01-01, 2010-04-01, 2010-07-01, 2010-10-01, 2011-01-05, 2011-08-04, 2011-12-06, 2012-03-06, 2012-04-24, 2012-06-05, 2012-08-06, 2012-10-09, 2012-12-04, 2013-02-05, 2013-03-05, 2013-08-06, 2013-10-22, 2014-03-04, 2014-06-26, 2014-10-17, 2015-01-26, 2015-03-19.
 
 - Blood chlorine: "99.0, 99.0, 100.0, 102.0, 102.0, 102.0, 98.0, 101.0, 99.9, 100.0, 102.0, 102.0, 100.0, 98.0, 92.0, 96.0, 101.0, 101.0, 93.0, 96.0, 101.0, 97.0, 101.0, 97.0, 102.0, 100.0, 99.0, 100.0, 99.0, 96.0, 98.0". Unit: mmol/L. Reference range for healthy people: 96 mmol/L to 106 mmol/L. Reference range for ESRD patients: higher than 96 mmol/L.
 - Carbon dioxide binding power: "22.9, 22.9, 25.6, 24.5, 24.5, 26.3, 22.5, 22.2, 24.0, 22.6, 24.3, 24.3, 21.7, 26.4, 26.6, 29.0, 26.7, 26.7, 27.7, 26.2, 25.9, 26.8, 22.6, 23.2, 24.3, 23.1, 25.1, 26.3, 25.0, 20.4, 18.7". Unit: mmol/L. Reference range for healthy people: 20 mmol/L to 29 mmol/L. Reference range for ESRD patients: higher than 25 mmol/L.
@@ -31,20 +29,21 @@ The patient's EHR data is recorded at the following time points:
 
 ### Feature Importance Weights
 
-- **DoctorAgent1**: The mortality prediction risk for the patient from AdaCare model is 0.55 out of 1.0. The risk is at the middle 30% among all ESRD patients. Our model especially pays great attention to the following features:
-  Carbon dioxide binding power: with importance weight of 0.788 out of 1.0. The feature value is 18.7 mmol/L, which is 32.0% lower than the median value of survival patients (27.4 mmol/L), 32.0% lower than the median value of deceased patients (27.5 mmol/L). The reference range for healthy people is 20 mmol/L to 29 mmol/L. The reference range for ESRD patients is higher than 25 mmol/L.
-  Albumin: with importance weight of 0.749 out of 1.0. The feature value is 30.2 g/L, which is 21.0% lower than the median value of survival patients (38.1 g/L), 9.0% lower than the median value of deceased patients (33.1 g/L). The reference range for healthy people is 40 g/L to 55 g/L. The reference range for ESRD patients is higher than 32 g/L.
-  Food intake (with water): with importance weight of 0.707 out of 1.0. The feature value is 3495.67 g, which is 8.0% higher than the median value of survival patients (3241.22 g), 17.0% higher than the median value of deceased patients (2986.63 g).
-
-- **DoctorAgent2**: The mortality prediction risk for the patient from ConCare model is 0.17 out of 1.0. The risk is at the bottom 40% among all ESRD patients. Our model especially pays great attention to the following features:
-  Diastolic blood pressure: with importance weight of 1.0 out of 1.0. The feature value is 85.0 mmHg, which is 6.0% higher than the median value of survival patients (80.0 mmHg), 21.0% higher than the median value of deceased patients (70.0 mmHg). The reference range for healthy people is 60 mmHg to 80 mmHg. The reference range for ESRD patients is higher than 70 mmHg.
-  Creatinine: with importance weight of 0.0 out of 1.0. The feature value is 768.0 μmol/L, which is 10.0% lower than the median value of survival patients (850.0 μmol/L), 4.0% higher than the median value of deceased patients (738.0 μmol/L). The reference range for healthy people is 62 μmol/L to 115 μmol/L. The reference range for ESRD patients is higher than 900 μmol/L.
-  Blood chlorine: with importance weight of 0.0 out of 1.0. The feature value is 98.0 mmol/L, which is None than the median value of survival patients (98.0 mmol/L), 2.0% higher than the median value of deceased patients (96.0 mmol/L). The reference range for healthy people is 96 mmol/L to 106 mmol/L. The reference range for ESRD patients is higher than 96 mmol/L.
-
-- **DoctorAgent3**: The mortality prediction risk for the patient from RETAIN model is 0.69 out of 1.0. The risk is at the top 30% among all ESRD patients. Our model especially pays great attention to the following features:
-  Blood potassium: with importance weight of 0.788 out of 1.0. The feature value is 3.11 mmol/L, which is 27.0% lower than the median value of survival patients (4.25 mmol/L), 24.0% lower than the median value of deceased patients (4.07 mmol/L). The reference range for healthy people is 3.5 mmol/L to 5.5 mmol/L. The reference range for ESRD patients is higher than 4 mmol/L.
-  Albumin: with importance weight of 0.749 out of 1.0. The feature value is 30.2 g/L, which is 21.0% lower than the median value of survival patients (38.1 g/L), 9.0% lower than the median value of deceased patients (33.1 g/L). The reference range for healthy people is 40 g/L to 55 g/L. The reference range for ESRD patients is higher than 32 g/L.
-  Food intake (with water): with importance weight of 0.707 out of 1.0. The feature value is 3495.67 g, which is 8.0% higher than the median value of survival patients (3241.22 g), 17.0% higher than the median value of deceased patients (2986.63 g).
+- **DoctorAgent1**:
+The mortality prediction risk for the patient from AdaCare model is 0.55 out of 1.0. The risk is at the middle 30% among all ESRD patients. Our model especially pays great attention to the following features:
+- Carbon dioxide binding power: with importance weight of 0.788 out of 1.0. The feature value is 18.7 mmol/L, which is 32.0% lower than the median value of survival patients (27.4 mmol/L), 32.0% lower than the median value of deceased patients (27.5 mmol/L). The reference range for healthy people is 20 mmol/L to 29 mmol/L. The reference range for ESRD patients is higher than 25 mmol/L.
+- Albumin: with importance weight of 0.749 out of 1.0. The feature value is 30.2 g/L, which is 21.0% lower than the median value of survival patients (38.1 g/L), 9.0% lower than the median value of deceased patients (33.1 g/L). The reference range for healthy people is 40 g/L to 55 g/L. The reference range for ESRD patients is higher than 32 g/L.
+- Food intake (with water): with importance weight of 0.707 out of 1.0. The feature value is 3495.67 g, which is 8.0% higher than the median value of survival patients (3241.22 g), 17.0% higher than the median value of deceased patients (2986.63 g).
+- **DoctorAgent2**:
+The mortality prediction risk for the patient from ConCare model is 0.17 out of 1.0. The risk is at the bottom 40% among all ESRD patients. Our model especially pays great attention to the following features:
+- Diastolic blood pressure: with importance weight of 1.0 out of 1.0. The feature value is 85.0 mmHg, which is 6.0% higher than the median value of survival patients (80.0 mmHg), 21.0% higher than the median value of deceased patients (70.0 mmHg). The reference range for healthy people is 60 mmHg to 80 mmHg. The reference range for ESRD patients is higher than 70 mmHg.
+- Creatinine: with importance weight of 0.0 out of 1.0. The feature value is 768.0 μmol/L, which is 10.0% lower than the median value of survival patients (850.0 μmol/L), 4.0% higher than the median value of deceased patients (738.0 μmol/L). The reference range for healthy people is 62 μmol/L to 115 μmol/L. The reference range for ESRD patients is higher than 900 μmol/L.
+- Blood chlorine: with importance weight of 0.0 out of 1.0. The feature value is 98.0 mmol/L, which is None than the median value of survival patients (98.0 mmol/L), 2.0% higher than the median value of deceased patients (96.0 mmol/L). The reference range for healthy people is 96 mmol/L to 106 mmol/L. The reference range for ESRD patients is higher than 96 mmol/L.
+- **DoctorAgent3**:
+The mortality prediction risk for the patient from RETAIN model is 0.69 out of 1.0. The risk is at the top 30% among all ESRD patients. Our model especially pays great attention to the following features:
+- Blood potassium: with importance weight of 0.788 out of 1.0. The feature value is 3.11 mmol/L, which is 27.0% lower than the median value of survival patients (4.25 mmol/L), 24.0% lower than the median value of deceased patients (4.07 mmol/L). The reference range for healthy people is 3.5 mmol/L to 5.5 mmol/L. The reference range for ESRD patients is higher than 4 mmol/L.
+- Albumin: with importance weight of 0.749 out of 1.0. The feature value is 30.2 g/L, which is 21.0% lower than the median value of survival patients (38.1 g/L), 9.0% lower than the median value of deceased patients (33.1 g/L). The reference range for healthy people is 40 g/L to 55 g/L. The reference range for ESRD patients is higher than 32 g/L.
+- Food intake (with water): with importance weight of 0.707 out of 1.0. The feature value is 3495.67 g, which is 8.0% higher than the median value of survival patients (3241.22 g), 17.0% higher than the median value of deceased patients (2986.63 g).
 
 ### Retrieved Documents
 
@@ -61,6 +60,7 @@ The patient's EHR data is recorded at the following time points:
   - **Document [3]**: Title: Renal Insufficiency in Pregnancy - Gynecology and Obstetrics - MSD Manual Professional Edition
 
 - **DoctorAgent3**:
+
   - **Document [1]**: Title: Hemodialysis - Genitourinary Disorders - MSD Manual Professional Edition
   - **Document [2]**: Title: Unit of Measure Conversions - Resources - MSD Manual Professional Edition
   - **Document [3]**: Title: Chronic Kidney Disease - Genitourinary Disorders - MSD Manual Professional Edition
