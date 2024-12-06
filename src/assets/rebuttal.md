@@ -18,6 +18,7 @@ For reviewers' convenience, we have made complete code (https://colacare.netlify
 ColaCare represents a significant advancement in clinical decision support by bridging the gap between structured EHR analysis and clinical reasoning. Our framework's demonstrated effectiveness, interpretability, and alignment with expert clinical judgment position it to meaningfully impact healthcare delivery and patient outcomes. We are committed to further developing and validating ColaCare to ensure its practical value in clinical settings.
 
 Best regards,
+
 Authors of Paper #542
 
 ## Response to Reviewer #vxpv
