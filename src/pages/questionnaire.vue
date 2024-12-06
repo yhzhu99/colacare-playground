@@ -3,8 +3,6 @@ import { onMounted, ref, watch } from 'vue'
 import * as echarts from 'echarts'
 
 const chartContainer = ref(null)
-const selectedPrediction = ref('')
-const selectedFeatureAssessment = ref('')
 const activeIndicators = ref(['albumin']) // Default to showing albumin
 let chart = null
 
@@ -43,7 +41,7 @@ function toggleIndicator(id) {
 }
 
 // Watch for changes in activeIndicators
-watch(activeIndicators, (newVal) => {
+watch(activeIndicators, (_newVal) => {
   if (chart)
     updateChart()
 }, { deep: true })
@@ -103,8 +101,7 @@ function updateChart() {
         let result = `${params[0].axisValue}<br/>`
         params.forEach((param) => {
           const indicator = indicators.find(i => i.name === param.seriesName)
-          result += `${param.marker + param.seriesName}: ${
-                   param.value} ${indicator?.unit}<br/>`
+          result += `${param.marker + param.seriesName}: ${param.value} ${indicator?.unit}<br/>`
         })
         return result
       },
@@ -150,20 +147,50 @@ function updateChart() {
   chart.setOption(option, true) // Use true to clear previous options completely
 }
 
-const aiPredictionOptions = [
-  { value: 'A', label: 'A. AI failed to correctly assess the patient\'s condition throughout the follow-up sequence' },
-  { value: 'B', label: 'B. AI made false-positive predictions when the patient was still in good condition' },
-  { value: 'C', label: 'C. AI failed to respond when patient was at risk, making predictions too late' },
-  { value: 'D', label: 'D. AI made relatively correct judgments in most visits' },
-  { value: 'E', label: 'E. AI maintained highly reasonable and accurate predictive performance throughout' },
+const evaluationQuestions = [
+  {
+    id: 1,
+    title: 'Clinical Expert Alignment',
+    description: 'Rate how well the AI system\'s analysis aligns with expert clinical judgment:',
+    options: [
+      { value: 1, label: 'Poor alignment with expert clinical reasoning' },
+      { value: 2, label: 'Limited alignment with clinical expertise' },
+      { value: 3, label: 'Moderate alignment with expert judgment' },
+      { value: 4, label: 'Good alignment with clinical expert assessment' },
+      { value: 5, label: 'Excellent alignment with expert clinical decision-making' },
+    ],
+  },
+  {
+    id: 2,
+    title: 'Feature Identification Accuracy',
+    description: 'Evaluate the relevance of identified risk factors:',
+    options: [
+      { value: 1, label: 'Irrelevant feature identification' },
+      { value: 2, label: 'Partially relevant features identified' },
+      { value: 3, label: 'Moderately relevant feature selection' },
+      { value: 4, label: 'Highly relevant feature identification' },
+      { value: 5, label: 'Optimal clinical feature selection' },
+    ],
+  },
+  {
+    id: 3,
+    title: 'Clinical Decision Support Value',
+    description: 'Rate the overall clinical utility of the AI analysis:',
+    options: [
+      { value: 1, label: 'Minimal clinical value' },
+      { value: 2, label: 'Limited clinical value' },
+      { value: 3, label: 'Moderate clinical value' },
+      { value: 4, label: 'High clinical value' },
+      { value: 5, label: 'Exceptional clinical value' },
+    ],
+  },
 ]
 
-const featureIdentificationOptions = [
-  { value: 'A', label: 'A. AI completely failed to identify predictive features in every visit' },
-  { value: 'B', label: 'B. AI reasonably identified features indicating good prognosis during healthy periods' },
-  { value: 'C', label: 'C. AI reasonably identified warning features during risk periods' },
-  { value: 'D', label: 'D. AI reasonably discovered outcome-indicative features for most visits' },
-]
+const selectedScores = ref({
+  1: null,
+  2: null,
+  3: null,
+})
 
 // Mount chart
 onMounted(() => {
@@ -176,15 +203,6 @@ onUnmounted(() => {
     chart.dispose()
     chart = null
   }
-})
-
-onMounted(() => {
-  chart = echarts.init(chartContainer.value)
-  updateChart()
-
-  window.addEventListener('resize', () => {
-    chart.resize()
-  })
 })
 </script>
 
@@ -278,10 +296,8 @@ onMounted(() => {
             <h3>Laboratory Indicators</h3>
             <div class="indicators-grid">
               <button
-                v-for="indicator in indicators"
-                :key="indicator.id"
-                class="indicator-btn" :class="[{ active: activeIndicators.includes(indicator.id) }]"
-                @click="toggleIndicator(indicator.id)"
+                v-for="indicator in indicators" :key="indicator.id" class="indicator-btn"
+                :class="[{ active: activeIndicators.includes(indicator.id) }]" @click="toggleIndicator(indicator.id)"
               >
                 {{ indicator.name }} ({{ indicator.value }} {{ indicator.unit }})
               </button>
@@ -309,37 +325,30 @@ onMounted(() => {
             </div>
 
             <div class="questionnaire">
-              <div class="question">
-                <h4>1. AI Model's Death Risk Prediction Assessment:</h4>
-                <div class="options">
-                  <label v-for="(option, index) in aiPredictionOptions" :key="index">
-                    <input
-                      v-model="selectedPrediction"
-                      type="radio"
-                      :value="option.value"
-                    >
-                    <span>{{ option.label }}</span>
-                  </label>
-                </div>
-              </div>
+              <div v-for="question in evaluationQuestions" :key="question.id" class="evaluation-question">
+                <h4>{{ question.id }}) {{ question.title }}</h4>
+                <p class="question-description">
+                  {{ question.description }}
+                </p>
 
-              <div class="question">
-                <h4>2. Reasonability of AI's Key Feature Identification:</h4>
-                <div class="options">
-                  <label v-for="(option, index) in featureIdentificationOptions" :key="index">
+                <div class="score-options">
+                  <label
+                    v-for="option in question.options" :key="option.value" class="score-option"
+                    :class="{ selected: selectedScores[question.id] === option.value }"
+                  >
                     <input
-                      v-model="selectedFeatureAssessment"
-                      type="radio"
+                      v-model="selectedScores[question.id]" type="radio" :name="`question-${question.id}`"
                       :value="option.value"
                     >
-                    <span>{{ option.label }}</span>
+                    <span class="score-label">Score: {{ option.value }}</span>
+                    <span class="score-description">{{ option.label }}</span>
                   </label>
                 </div>
               </div>
             </div>
 
-            <button class="submit-btn" @click="submitColaCareEvaluation">
-              Submit ColaCare Evaluation
+            <button class="submit-btn">
+              Submit Evaluation
             </button>
           </div>
         </div>
@@ -349,26 +358,31 @@ onMounted(() => {
 </template>
 
 <style scoped>
+.medical-dashboard {
+  margin: 0 auto;
+  padding: 20px;
+  display: grid;
+  gap: 4px;
+  grid-template-columns: 450px 1fr; /* Increased from 380px */
+  max-width: 2200px; /* Add this line to set maximum width */
+  width: 100%;
+}
+
 .container {
   min-height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.medical-dashboard {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 20px;
-  display: grid;
-  gap: 20px;
-  grid-template-columns: 380px 1fr;
+  width: 100%;
+  max-width: 2200px; /* Add this line */
+  margin: 0 auto; /* Add this line */
 }
 
 .left-panel, .right-panel {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 12px;
+  padding: 0 10px;
 }
 
 .demographics-card,
@@ -427,7 +441,7 @@ onMounted(() => {
 }
 
 .chart-container {
-  height: 400px;
+  height: 330px; /* Increased from 400px */
   width: 100%;
   margin: 20px 0;
 }
@@ -486,17 +500,66 @@ onMounted(() => {
   font-size: 13px;
 }
 
-.submit-btn {
-  width: 100%;
-  padding: 12px;
-  background: #1976d2;
-  color: white;
-  border: none;
-  border-radius: 6px;
+.evaluation-question {
+  margin-bottom: 24px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.evaluation-question h4 {
+  color: #1976d2;
   font-size: 16px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.question-description {
+  color: #424242;
+  font-size: 14px;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.score-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.score-option {
+  display: flex;
+  align-items: center;
+  padding: 14px;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s;
-  margin-top: 20px;
+  transition: all 0.2s ease;
+  margin-bottom: 8px;
+}
+
+.score-option:hover {
+  background: #f5f5f5;
+  border-color: #bbdefb;
+}
+
+.score-option.selected {
+  background: #e3f2fd;
+  border-color: #2196f3;
+}
+
+.score-label {
+  font-weight: 600;
+  margin-right: 16px;
+  min-width: 80px;
+  color: #1976d2;
+}
+
+.score-description {
+  color: #616161;
+  font-size: 14px;
 }
 
 .title-container {
@@ -552,8 +615,7 @@ onMounted(() => {
 .options label {
   display: flex;
   gap: 10px;
-  align-items: flex-start;
-  font-size: 14px;
+  align-items: flex-start; font-size: 14px;
   padding: 8px;
   background: #f8f9fa;
   border-radius: 6px;
@@ -564,8 +626,30 @@ onMounted(() => {
   background: #e9ecef;
 }
 
+.submit-btn {
+  margin-top: 24px;
+  padding: 14px 28px;
+  background: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  width: 100%;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(33, 150, 243, 0.3);
+}
+
 .submit-btn:hover {
-  background: #1565c0;
+  background: #1976d2;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(33, 150, 243, 0.4);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(33, 150, 243, 0.3);
 }
 
 h3 {
@@ -580,7 +664,7 @@ h4 {
   font-size: 14px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 2000px) { /* Increased from 1400px */
   .medical-dashboard {
     grid-template-columns: 1fr;
   }
