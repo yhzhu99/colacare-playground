@@ -18,18 +18,18 @@ defineOptions({
         <p>Complete prompt templates</p>
       </div>
     </router-link>
-    <router-link to="/case" class="grid-item button grid-item-3">
+    <router-link to="/case" class="grid-item button grid-item-4">
       <div class="content">
         <h2>Case Study</h2>
         <p>More case studies</p>
       </div>
     </router-link>
-    <router-link to="/rebuttal" class="grid-item button grid-item-4">
+    <!-- <router-link to="/rebuttal" class="grid-item button grid-item-4">
       <div class="content">
         <h2>Rebuttal</h2>
         <p>Detailed version of rebuttal</p>
       </div>
-    </router-link>
+    </router-link> -->
     <router-link to="/questionnaire" class="grid-item button grid-item-5">
       <div class="content">
         <h2>Questionnaire</h2>
@@ -42,7 +42,7 @@ defineOptions({
 <style scoped>
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr 1fr;
   gap: 40px;
   padding: 10px;
