@@ -7,9 +7,9 @@
     <a
       i-carbon-logo-github icon-btn
       rel="noreferrer"
-      href="https://github.com"
+      href="https://github.com/PKU-AICare/ColaCare"
       target="_blank"
-      title="GitHub"
+      title="GitHub Repository"
     />
   </nav>
 <!-- TODO: update code link -->
